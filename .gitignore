@@ -1,0 +1,13 @@
+build-*/
+debug/
+release/
+*.pro.user
+.pro.user
+.qmake.stash
+*.log
+*.exe
+*.dll
+*.o
+*.obj
+*.tmp
+*.bak
