@@ -1,5 +1,5 @@
-D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Qt/project/likeqqmorepeopleconnection/mainwindow.h \
-  D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/moc_predefs.h \
+D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Qt/project/chat/likeqqmorepeopleconnection/mainwindow.h \
+  D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/moc_predefs.h \
   D:/Qt/6.11.0/mingw_64/include/QtCore/q17memory.h \
   D:/Qt/6.11.0/mingw_64/include/QtCore/q20bit.h \
   D:/Qt/6.11.0/mingw_64/include/QtCore/q20functional.h \

@@ -52,10 +52,10 @@ RM = D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\project\likeqqmorepeopleconnection
+CMAKE_SOURCE_DIR = D:\Qt\project\chat\likeqqmorepeopleconnection
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+CMAKE_BINARY_DIR = D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
 
 # Utility rule file for likeqqmorepeopleconnection_autogen_timestamp_deps.
 
@@ -77,6 +77,6 @@ CMakeFiles/likeqqmorepeopleconnection_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/likeqqmorepeopleconnection_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/likeqqmorepeopleconnection_autogen_timestamp_deps.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\project\likeqqmorepeopleconnection D:\Qt\project\likeqqmorepeopleconnection D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\likeqqmorepeopleconnection_autogen_timestamp_deps.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\project\chat\likeqqmorepeopleconnection D:\Qt\project\chat\likeqqmorepeopleconnection D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\likeqqmorepeopleconnection_autogen_timestamp_deps.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/likeqqmorepeopleconnection_autogen_timestamp_deps.dir/depend
 

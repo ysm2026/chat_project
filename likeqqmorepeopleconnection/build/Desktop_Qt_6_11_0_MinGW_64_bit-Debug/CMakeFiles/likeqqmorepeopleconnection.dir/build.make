@@ -52,10 +52,10 @@ RM = D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\project\likeqqmorepeopleconnection
+CMAKE_SOURCE_DIR = D:\Qt\project\chat\likeqqmorepeopleconnection
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+CMAKE_BINARY_DIR = D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/likeqqmorepeopleconnection.dir/depend.make
@@ -71,69 +71,69 @@ include CMakeFiles/likeqqmorepeopleconnection.dir/flags.make
 likeqqmorepeopleconnection_autogen/timestamp: D:/Qt/6.11.0/mingw_64/bin/moc.exe
 likeqqmorepeopleconnection_autogen/timestamp: D:/Qt/6.11.0/mingw_64/bin/uic.exe
 likeqqmorepeopleconnection_autogen/timestamp: CMakeFiles/likeqqmorepeopleconnection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target likeqqmorepeopleconnection"
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/likeqqmorepeopleconnection_autogen.dir/AutogenInfo.json Debug
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target likeqqmorepeopleconnection"
+	D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/likeqqmorepeopleconnection_autogen.dir/AutogenInfo.json Debug
+	D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/timestamp
 
 CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/flags.make
 CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/includes_CXX.rsp
 CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj: likeqqmorepeopleconnection_autogen/mocs_compilation.cpp
 CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.obj -c D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.obj -c D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp
 
 CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.i"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.i
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.s"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.s
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/flags.make
 CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/includes_CXX.rsp
-CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj: D:/Qt/project/likeqqmorepeopleconnection/main.cpp
+CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj: D:/Qt/project/chat/likeqqmorepeopleconnection/main.cpp
 CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.obj -c D:\Qt\project\likeqqmorepeopleconnection\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.obj -c D:\Qt\project\chat\likeqqmorepeopleconnection\main.cpp
 
 CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.i"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\likeqqmorepeopleconnection\main.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.i
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\likeqqmorepeopleconnection\main.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.i
 
 CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.s"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\likeqqmorepeopleconnection\main.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.s
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\likeqqmorepeopleconnection\main.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\main.cpp.s
 
 CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/flags.make
 CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/includes_CXX.rsp
-CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj: D:/Qt/project/likeqqmorepeopleconnection/mainwindow.cpp
+CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj: D:/Qt/project/chat/likeqqmorepeopleconnection/mainwindow.cpp
 CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.obj -c D:\Qt\project\likeqqmorepeopleconnection\mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.obj -c D:\Qt\project\chat\likeqqmorepeopleconnection\mainwindow.cpp
 
 CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.i"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\likeqqmorepeopleconnection\mainwindow.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.i
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\likeqqmorepeopleconnection\mainwindow.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.i
 
 CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.s"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\likeqqmorepeopleconnection\mainwindow.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.s
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\likeqqmorepeopleconnection\mainwindow.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\mainwindow.cpp.s
 
 CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/flags.make
 CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/includes_CXX.rsp
-CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj: D:/Qt/project/likeqqmorepeopleconnection/dbhelper.cpp
+CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj: D:/Qt/project/chat/likeqqmorepeopleconnection/dbhelper.cpp
 CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj: CMakeFiles/likeqqmorepeopleconnection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.obj -c D:\Qt\project\likeqqmorepeopleconnection\dbhelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj -MF CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.obj.d -o CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.obj -c D:\Qt\project\chat\likeqqmorepeopleconnection\dbhelper.cpp
 
 CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.i"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\likeqqmorepeopleconnection\dbhelper.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.i
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\likeqqmorepeopleconnection\dbhelper.cpp > CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.i
 
 CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.s"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\likeqqmorepeopleconnection\dbhelper.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.s
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\likeqqmorepeopleconnection\dbhelper.cpp -o CMakeFiles\likeqqmorepeopleconnection.dir\dbhelper.cpp.s
 
 # Object files for target likeqqmorepeopleconnection
 likeqqmorepeopleconnection_OBJECTS = \
@@ -159,7 +159,7 @@ likeqqmorepeopleconnection.exe: D:/Qt/6.11.0/mingw_64/lib/libQt6EntryPoint.a
 likeqqmorepeopleconnection.exe: CMakeFiles/likeqqmorepeopleconnection.dir/linkLibs.rsp
 likeqqmorepeopleconnection.exe: CMakeFiles/likeqqmorepeopleconnection.dir/objects1.rsp
 likeqqmorepeopleconnection.exe: CMakeFiles/likeqqmorepeopleconnection.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable likeqqmorepeopleconnection.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable likeqqmorepeopleconnection.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\likeqqmorepeopleconnection.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -171,6 +171,6 @@ CMakeFiles/likeqqmorepeopleconnection.dir/clean:
 .PHONY : CMakeFiles/likeqqmorepeopleconnection.dir/clean
 
 CMakeFiles/likeqqmorepeopleconnection.dir/depend: likeqqmorepeopleconnection_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\project\likeqqmorepeopleconnection D:\Qt\project\likeqqmorepeopleconnection D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\likeqqmorepeopleconnection.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\project\chat\likeqqmorepeopleconnection D:\Qt\project\chat\likeqqmorepeopleconnection D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\likeqqmorepeopleconnection.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/likeqqmorepeopleconnection.dir/depend
 

@@ -1,7 +1,7 @@
 CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/mocs_compilation.cpp.obj: \
- D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp \
- D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\EWIEGA46WW/moc_dbhelper.cpp \
- D:/Qt/project/likeqqmorepeopleconnection/dbhelper.h \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\mocs_compilation.cpp \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\EWIEGA46WW/moc_dbhelper.cpp \
+ D:/Qt/project/chat/likeqqmorepeopleconnection/dbhelper.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Qt/6.11.0/mingw_64/include/QtCore/qobject.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/qobjectdefs.h \
@@ -358,8 +358,8 @@ CMakeFiles/likeqqmorepeopleconnection.dir/likeqqmorepeopleconnection_autogen/moc
  D:/Qt/6.11.0/mingw_64/include/QtCore/qtmochelpers.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/qtmocconstants.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/q20algorithm.h \
- D:\Qt\project\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\EWIEGA46WW/moc_mainwindow.cpp \
- D:/Qt/project/likeqqmorepeopleconnection/mainwindow.h \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\likeqqmorepeopleconnection_autogen\EWIEGA46WW/moc_mainwindow.cpp \
+ D:/Qt/project/chat/likeqqmorepeopleconnection/mainwindow.h \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

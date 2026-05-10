@@ -52,10 +52,10 @@ RM = D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\project\ChatServer
+CMAKE_SOURCE_DIR = D:\Qt\project\chat\ChatServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+CMAKE_BINARY_DIR = D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ChatServer.dir/depend.make
@@ -70,56 +70,92 @@ include CMakeFiles/ChatServer.dir/flags.make
 
 ChatServer_autogen/timestamp: D:/Qt/6.11.0/mingw_64/bin/moc.exe
 ChatServer_autogen/timestamp: CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ChatServer"
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/ChatServer_autogen.dir/AutogenInfo.json Debug
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/ChatServer_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ChatServer"
+	D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/ChatServer_autogen.dir/AutogenInfo.json Debug
+	D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/ChatServer_autogen/timestamp
 
 CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj: CMakeFiles/ChatServer.dir/flags.make
 CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj: CMakeFiles/ChatServer.dir/includes_CXX.rsp
 CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj: ChatServer_autogen/mocs_compilation.cpp
 CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj: CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.obj -c D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\ChatServer_autogen\mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.obj -c D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\ChatServer_autogen\mocs_compilation.cpp
 
 CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.i"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\ChatServer_autogen\mocs_compilation.cpp > CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.i
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\ChatServer_autogen\mocs_compilation.cpp > CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.s"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\ChatServer_autogen\mocs_compilation.cpp -o CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.s
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\ChatServer_autogen\mocs_compilation.cpp -o CMakeFiles\ChatServer.dir\ChatServer_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/ChatServer.dir/main.cpp.obj: CMakeFiles/ChatServer.dir/flags.make
 CMakeFiles/ChatServer.dir/main.cpp.obj: CMakeFiles/ChatServer.dir/includes_CXX.rsp
-CMakeFiles/ChatServer.dir/main.cpp.obj: D:/Qt/project/ChatServer/main.cpp
+CMakeFiles/ChatServer.dir/main.cpp.obj: D:/Qt/project/chat/ChatServer/main.cpp
 CMakeFiles/ChatServer.dir/main.cpp.obj: CMakeFiles/ChatServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ChatServer.dir/main.cpp.obj"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/main.cpp.obj -MF CMakeFiles\ChatServer.dir\main.cpp.obj.d -o CMakeFiles\ChatServer.dir\main.cpp.obj -c D:\Qt\project\ChatServer\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ChatServer.dir/main.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/main.cpp.obj -MF CMakeFiles\ChatServer.dir\main.cpp.obj.d -o CMakeFiles\ChatServer.dir\main.cpp.obj -c D:\Qt\project\chat\ChatServer\main.cpp
 
 CMakeFiles/ChatServer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/main.cpp.i"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\ChatServer\main.cpp > CMakeFiles\ChatServer.dir\main.cpp.i
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\ChatServer\main.cpp > CMakeFiles\ChatServer.dir\main.cpp.i
 
 CMakeFiles/ChatServer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/main.cpp.s"
-	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\ChatServer\main.cpp -o CMakeFiles\ChatServer.dir\main.cpp.s
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\ChatServer\main.cpp -o CMakeFiles\ChatServer.dir\main.cpp.s
+
+CMakeFiles/ChatServer.dir/dbhelper.cpp.obj: CMakeFiles/ChatServer.dir/flags.make
+CMakeFiles/ChatServer.dir/dbhelper.cpp.obj: CMakeFiles/ChatServer.dir/includes_CXX.rsp
+CMakeFiles/ChatServer.dir/dbhelper.cpp.obj: D:/Qt/project/chat/ChatServer/dbhelper.cpp
+CMakeFiles/ChatServer.dir/dbhelper.cpp.obj: CMakeFiles/ChatServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ChatServer.dir/dbhelper.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/dbhelper.cpp.obj -MF CMakeFiles\ChatServer.dir\dbhelper.cpp.obj.d -o CMakeFiles\ChatServer.dir\dbhelper.cpp.obj -c D:\Qt\project\chat\ChatServer\dbhelper.cpp
+
+CMakeFiles/ChatServer.dir/dbhelper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/dbhelper.cpp.i"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\ChatServer\dbhelper.cpp > CMakeFiles\ChatServer.dir\dbhelper.cpp.i
+
+CMakeFiles/ChatServer.dir/dbhelper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/dbhelper.cpp.s"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\ChatServer\dbhelper.cpp -o CMakeFiles\ChatServer.dir\dbhelper.cpp.s
+
+CMakeFiles/ChatServer.dir/chatserver.cpp.obj: CMakeFiles/ChatServer.dir/flags.make
+CMakeFiles/ChatServer.dir/chatserver.cpp.obj: CMakeFiles/ChatServer.dir/includes_CXX.rsp
+CMakeFiles/ChatServer.dir/chatserver.cpp.obj: D:/Qt/project/chat/ChatServer/chatserver.cpp
+CMakeFiles/ChatServer.dir/chatserver.cpp.obj: CMakeFiles/ChatServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ChatServer.dir/chatserver.cpp.obj"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatServer.dir/chatserver.cpp.obj -MF CMakeFiles\ChatServer.dir\chatserver.cpp.obj.d -o CMakeFiles\ChatServer.dir\chatserver.cpp.obj -c D:\Qt\project\chat\ChatServer\chatserver.cpp
+
+CMakeFiles/ChatServer.dir/chatserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChatServer.dir/chatserver.cpp.i"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Qt\project\chat\ChatServer\chatserver.cpp > CMakeFiles\ChatServer.dir\chatserver.cpp.i
+
+CMakeFiles/ChatServer.dir/chatserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChatServer.dir/chatserver.cpp.s"
+	D:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Qt\project\chat\ChatServer\chatserver.cpp -o CMakeFiles\ChatServer.dir\chatserver.cpp.s
 
 # Object files for target ChatServer
 ChatServer_OBJECTS = \
 "CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj" \
-"CMakeFiles/ChatServer.dir/main.cpp.obj"
+"CMakeFiles/ChatServer.dir/main.cpp.obj" \
+"CMakeFiles/ChatServer.dir/dbhelper.cpp.obj" \
+"CMakeFiles/ChatServer.dir/chatserver.cpp.obj"
 
 # External object files for target ChatServer
 ChatServer_EXTERNAL_OBJECTS =
 
 ChatServer.exe: CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj
 ChatServer.exe: CMakeFiles/ChatServer.dir/main.cpp.obj
+ChatServer.exe: CMakeFiles/ChatServer.dir/dbhelper.cpp.obj
+ChatServer.exe: CMakeFiles/ChatServer.dir/chatserver.cpp.obj
 ChatServer.exe: CMakeFiles/ChatServer.dir/build.make
+ChatServer.exe: D:/Qt/6.11.0/mingw_64/lib/libQt6Sql.a
+ChatServer.exe: D:/Qt/6.11.0/mingw_64/lib/libQt6Network.a
 ChatServer.exe: D:/Qt/6.11.0/mingw_64/lib/libQt6Core.a
 ChatServer.exe: CMakeFiles/ChatServer.dir/linkLibs.rsp
 ChatServer.exe: CMakeFiles/ChatServer.dir/objects1.rsp
 ChatServer.exe: CMakeFiles/ChatServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ChatServer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ChatServer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ChatServer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -131,6 +167,6 @@ CMakeFiles/ChatServer.dir/clean:
 .PHONY : CMakeFiles/ChatServer.dir/clean
 
 CMakeFiles/ChatServer.dir/depend: ChatServer_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\project\ChatServer D:\Qt\project\ChatServer D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\ChatServer.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Qt\project\chat\ChatServer D:\Qt\project\chat\ChatServer D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\ChatServer.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ChatServer.dir/depend
 

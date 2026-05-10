@@ -1,6 +1,6 @@
 CMakeFiles/likeqqmorepeopleconnection.dir/dbhelper.cpp.obj: \
- D:\Qt\project\likeqqmorepeopleconnection\dbhelper.cpp \
- D:\Qt\project\likeqqmorepeopleconnection\dbhelper.h \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\dbhelper.cpp \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\dbhelper.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Qt/6.11.0/mingw_64/include/QtCore/qobject.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/qobjectdefs.h \

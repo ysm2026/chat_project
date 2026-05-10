@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug"
+			"value" : "d:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -467,7 +467,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Qt/project/likeqqmorepeopleconnection"
+			"value" : "D:/Qt/project/chat/likeqqmorepeopleconnection"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1051,7 +1051,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake"
+			"value" : "D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/.qtcreator/cmake-helper/qtcreator-project.cmake"
 		},
 		{
 			"name" : "CMAKE_PROJECT_NAME",
@@ -1551,7 +1551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/.qtcreator/cmake-helper"
+			"value" : "D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/.qtcreator/cmake-helper"
 		},
 		{
 			"name" : "QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH",
@@ -7074,18 +7074,6 @@
 			"value" : "D:/Qt/6.11.0/mingw_64/lib/cmake/Qt6Network"
 		},
 		{
-			"name" : "Qt6Qt6Core_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for Qt6Qt6Core."
-				}
-			],
-			"type" : "PATH",
-			"value" : "Qt6Qt6Core_DIR-NOTFOUND"
-		},
-		{
 			"name" : "Qt6Sql_DIR",
 			"properties" : 
 			[
@@ -7243,7 +7231,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug"
+			"value" : "D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug"
 		},
 		{
 			"name" : "likeqqmorepeopleconnection_IS_TOP_LEVEL",
@@ -7267,7 +7255,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Qt/project/likeqqmorepeopleconnection"
+			"value" : "D:/Qt/project/chat/likeqqmorepeopleconnection"
 		}
 	],
 	"kind" : "cache",

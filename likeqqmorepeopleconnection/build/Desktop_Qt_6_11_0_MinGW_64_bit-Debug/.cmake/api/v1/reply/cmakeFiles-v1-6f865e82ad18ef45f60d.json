@@ -1949,8 +1949,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug",
-		"source" : "D:/Qt/project/likeqqmorepeopleconnection"
+		"build" : "D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug",
+		"source" : "D:/Qt/project/chat/likeqqmorepeopleconnection"
 	},
 	"version" : 
 	{

@@ -1,6 +1,6 @@
 CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj: \
- D:\Qt\project\likeqqmorepeopleconnection\mainwindow.cpp \
- D:\Qt\project\likeqqmorepeopleconnection\mainwindow.h \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\mainwindow.cpp \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\mainwindow.h \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -386,7 +386,7 @@ CMakeFiles/likeqqmorepeopleconnection.dir/mainwindow.cpp.obj: \
  D:/Qt/6.11.0/mingw_64/include/QtGui/qcursor.h \
  D:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h \
- D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/include/ui_mainwindow.h \
+ D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/include/ui_mainwindow.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/QVariant \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/QApplication \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qapplication.h \

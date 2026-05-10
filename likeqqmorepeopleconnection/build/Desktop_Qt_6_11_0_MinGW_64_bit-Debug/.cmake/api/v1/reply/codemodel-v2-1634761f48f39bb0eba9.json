@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "likeqqmorepeopleconnection::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-likeqqmorepeopleconnection-Debug-d9f3b5f4c3c627d0ae7d.json",
+					"jsonFile" : "target-likeqqmorepeopleconnection-Debug-649088ecc8d96d7f06bf.json",
 					"name" : "likeqqmorepeopleconnection",
 					"projectIndex" : 0
 				},
@@ -68,8 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug",
-		"source" : "D:/Qt/project/likeqqmorepeopleconnection"
+		"build" : "D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug",
+		"source" : "D:/Qt/project/chat/likeqqmorepeopleconnection"
 	},
 	"version" : 
 	{

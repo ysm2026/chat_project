@@ -1,6 +1,6 @@
 CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj: \
- D:\Qt\project\likeqqmorepeopleconnection\main.cpp \
- D:\Qt\project\likeqqmorepeopleconnection\mainwindow.h \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\main.cpp \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\mainwindow.h \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -407,7 +407,7 @@ CMakeFiles/likeqqmorepeopleconnection.dir/main.cpp.obj: \
  D:/Qt/6.11.0/mingw_64/include/QtSql/qtsql-config.h \
  D:/Qt/6.11.0/mingw_64/include/QtSql/qtsqlexports.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/qmetaobject.h \
- D:\Qt\project\likeqqmorepeopleconnection\dbhelper.h \
+ D:\Qt\project\chat\likeqqmorepeopleconnection\dbhelper.h \
  D:/Qt/6.11.0/mingw_64/include/QtCore/QObject \
  D:/Qt/6.11.0/mingw_64/include/QtSql/QSqlQuery \
  D:/Qt/6.11.0/mingw_64/include/QtSql/qsqlquery.h \

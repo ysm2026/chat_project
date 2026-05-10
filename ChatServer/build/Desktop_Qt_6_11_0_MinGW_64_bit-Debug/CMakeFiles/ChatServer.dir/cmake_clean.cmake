@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/ChatServer.dir/chatserver.cpp.obj"
+  "CMakeFiles/ChatServer.dir/chatserver.cpp.obj.d"
+  "CMakeFiles/ChatServer.dir/dbhelper.cpp.obj"
+  "CMakeFiles/ChatServer.dir/dbhelper.cpp.obj.d"
   "CMakeFiles/ChatServer.dir/main.cpp.obj"
   "CMakeFiles/ChatServer.dir/main.cpp.obj.d"
   "ChatServer.exe"

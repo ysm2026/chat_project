@@ -278,7 +278,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake"
   "D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake"
-  "D:/Qt/project/likeqqmorepeopleconnection/CMakeLists.txt"
+  "D:/Qt/project/chat/likeqqmorepeopleconnection/CMakeLists.txt"
   ".qtcreator/cmake-helper/maintenance_tool_provider.cmake"
   ".qtcreator/cmake-helper/package-manager.cmake"
   ".qtcreator/cmake-helper/qtcreator-project.cmake"

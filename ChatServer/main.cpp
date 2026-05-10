@@ -1,8 +1,11 @@
-#include <QCoreApplication>
+#include<QCoreApplication>
+#include"chatserver.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+    chatserver ser;
+    ser.startServer(8888);
 
     // Set up code that uses the Qt event loop here.
     // Call QCoreApplication::quit() or QCoreApplication::exit() to quit the application.

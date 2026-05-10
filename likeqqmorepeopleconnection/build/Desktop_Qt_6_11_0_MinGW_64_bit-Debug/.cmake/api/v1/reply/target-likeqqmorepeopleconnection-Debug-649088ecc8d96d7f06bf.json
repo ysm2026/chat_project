@@ -418,7 +418,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "D:/Qt/project/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/include"
+					"path" : "D:/Qt/project/chat/likeqqmorepeopleconnection/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/likeqqmorepeopleconnection_autogen/include"
 				},
 				{
 					"backtrace" : 23,
@@ -478,11 +478,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "likeqqmorepeopleconnection_autogen::@6890427a1f51a3e7e1df"
+			"id" : "likeqqmorepeopleconnection_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "likeqqmorepeopleconnection_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "likeqqmorepeopleconnection_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "likeqqmorepeopleconnection::@6890427a1f51a3e7e1df",

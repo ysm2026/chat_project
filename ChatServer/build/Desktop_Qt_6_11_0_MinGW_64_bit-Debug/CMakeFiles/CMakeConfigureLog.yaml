@@ -28,7 +28,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe
+        D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe
       
   -
     kind: "try_compile-v1"
@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-h798kz"
-      binary: "D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-h798kz"
+      source: "D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-mqj09t"
+      binary: "D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-mqj09t"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -50,13 +50,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-h798kz'
+        Change Dir: 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-mqj09t'
         
-        Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_1f475/fast
-        D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1f475.dir\\build.make CMakeFiles/cmTC_1f475.dir/build
-        mingw32-make.exe[1]: Entering directory 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-h798kz'
-        Building CXX object CMakeFiles/cmTC_1f475.dir/CMakeCXXCompilerABI.cpp.obj
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp
+        Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_a5511/fast
+        D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a5511.dir\\build.make CMakeFiles/cmTC_a5511.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-mqj09t'
+        Building CXX object CMakeFiles/cmTC_a5511.dir/CMakeCXXCompilerABI.cpp.obj
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe
         Target: x86_64-w64-mingw32
@@ -64,8 +64,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1f475.dir\\'
-         D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_1f475.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\24855\\AppData\\Local\\Temp\\cchQl0wd.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a5511.dir\\'
+         D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_a5511.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\24855\\AppData\\Local\\Temp\\ccnJDqVK.s
         GNU C++17 (x86_64-posix-seh-rev1, Built by MinGW-Builds project) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.25-GMP
         
@@ -88,17 +88,17 @@ events:
          D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: b3d236387f35294e2a73c51628039e05
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1f475.dir\\'
-         D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\24855\\AppData\\Local\\Temp\\cchQl0wd.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a5511.dir\\'
+         D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\24855\\AppData\\Local\\Temp\\ccnJDqVK.s
         GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
         COMPILER_PATH=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_1f475.exe
-        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_1f475.dir\\link.txt --verbose=1
-        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_1f475.dir/objects.a
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_1f475.dir/objects.a @CMakeFiles\\cmTC_1f475.dir\\objects1.rsp
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_1f475.dir/objects.a -Wl,--no-whole-archive -o cmTC_1f475.exe -Wl,--out-implib,libcmTC_1f475.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_a5511.exe
+        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_a5511.dir\\link.txt --verbose=1
+        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_a5511.dir/objects.a
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_a5511.dir/objects.a @CMakeFiles\\cmTC_a5511.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_a5511.dir/objects.a -Wl,--no-whole-archive -o cmTC_a5511.exe -Wl,--out-implib,libcmTC_a5511.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Using built-in specs.
         COLLECT_GCC=D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -109,13 +109,13 @@ events:
         gcc version 13.1.0 (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 
         COMPILER_PATH=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1f475.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_1f475.'
-         D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -plugin D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\ccMxjzUl.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1310-posix-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_1f475.exe D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_1f475.dir/objects.a --no-whole-archive --out-implib libcmTC_1f475.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a5511.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a5511.'
+         D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -plugin D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\cc91ymZU.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1310-posix-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_a5511.exe D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a5511.dir/objects.a --no-whole-archive --out-implib libcmTC_a5511.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
         collect2 version 13.1.0
-        D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\ccMxjzUl.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1310-posix-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_1f475.exe D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_1f475.dir/objects.a --no-whole-archive --out-implib libcmTC_1f475.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\cc91ymZU.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1310-posix-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_a5511.exe D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a5511.dir/objects.a --no-whole-archive --out-implib libcmTC_a5511.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
         GNU ld (GNU Binutils) 2.39
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1f475.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_1f475.'
-        mingw32-make.exe[1]: Leaving directory 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-h798kz'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a5511.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a5511.'
+        mingw32-make.exe[1]: Leaving directory 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-mqj09t'
         
       exitCode: 0
   -
@@ -154,13 +154,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-h798kz']
+        ignore line: [Change Dir: 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-mqj09t']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_1f475/fast]
-        ignore line: [D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1f475.dir\\build.make CMakeFiles/cmTC_1f475.dir/build]
-        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-h798kz']
-        ignore line: [Building CXX object CMakeFiles/cmTC_1f475.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_a5511/fast]
+        ignore line: [D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a5511.dir\\build.make CMakeFiles/cmTC_a5511.dir/build]
+        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-mqj09t']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a5511.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -168,8 +168,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (x86_64-posix-seh-rev1  Built by MinGW-Builds project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1f475.dir\\']
-        ignore line: [ D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_1f475.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\24855\\AppData\\Local\\Temp\\cchQl0wd.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a5511.dir\\']
+        ignore line: [ D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT D:\\Qt\\Tools\\CMake_64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_a5511.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\24855\\AppData\\Local\\Temp\\ccnJDqVK.s]
         ignore line: [GNU C++17 (x86_64-posix-seh-rev1  Built by MinGW-Builds project) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.25-GMP]
         ignore line: []
@@ -192,8 +192,8 @@ events:
         ignore line: [ D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b3d236387f35294e2a73c51628039e05]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1f475.dir\\']
-        ignore line: [ D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\24855\\AppData\\Local\\Temp\\cchQl0wd.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a5511.dir\\']
+        ignore line: [ D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\24855\\AppData\\Local\\Temp\\ccnJDqVK.s]
         ignore line: [GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39]
         ignore line: [COMPILER_PATH=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
         ignore line: [D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/]
@@ -204,12 +204,12 @@ events:
         ignore line: [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_1f475.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_1f475.exe]
-        ignore line: [D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_1f475.dir\\link.txt --verbose=1]
-        ignore line: [D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_1f475.dir/objects.a]
-        ignore line: [D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_1f475.dir/objects.a @CMakeFiles\\cmTC_1f475.dir\\objects1.rsp]
-        ignore line: [D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_1f475.dir/objects.a -Wl --no-whole-archive -o cmTC_1f475.exe -Wl --out-implib libcmTC_1f475.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a5511.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_a5511.exe]
+        ignore line: [D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_a5511.dir\\link.txt --verbose=1]
+        ignore line: [D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_a5511.dir/objects.a]
+        ignore line: [D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_a5511.dir/objects.a @CMakeFiles\\cmTC_a5511.dir\\objects1.rsp]
+        ignore line: [D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_a5511.dir/objects.a -Wl --no-whole-archive -o cmTC_a5511.exe -Wl --out-implib libcmTC_a5511.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -227,13 +227,13 @@ events:
         ignore line: [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1f475.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_1f475.']
-        link line: [ D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -plugin D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\ccMxjzUl.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1310-posix-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_1f475.exe D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_1f475.dir/objects.a --no-whole-archive --out-implib libcmTC_1f475.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a5511.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a5511.']
+        link line: [ D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -plugin D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\cc91ymZU.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/buildroot/x86_64-1310-posix-seh-msvcrt-rt_v11-rev1/mingw64 -m i386pep -Bdynamic -o cmTC_a5511.exe D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a5511.dir/objects.a --no-whole-archive --out-implib libcmTC_a5511.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
           arg [D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=D:/Qt/Tools/mingw1310_64/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\ccMxjzUl.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\24855\\AppData\\Local\\Temp\\cc91ymZU.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -259,7 +259,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_1f475.exe] ==> ignore
+          arg [cmTC_a5511.exe] ==> ignore
           arg [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
           arg [-LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
@@ -270,10 +270,10 @@ events:
           arg [-LD:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [D:/Qt/Tools/mingw1310_64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_1f475.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_a5511.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_1f475.dll.a] ==> ignore
+          arg [libcmTC_a5511.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -365,8 +365,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-2zhuna"
-      binary: "D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-2zhuna"
+      source: "D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ixlqww"
+      binary: "D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ixlqww"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -376,19 +376,19 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-2zhuna'
+        Change Dir: 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ixlqww'
         
-        Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_ece17/fast
-        D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ece17.dir\\build.make CMakeFiles/cmTC_ece17.dir/build
-        mingw32-make.exe[1]: Entering directory 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-2zhuna'
-        Building CXX object CMakeFiles/cmTC_ece17.dir/src.cxx.obj
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles\\cmTC_ece17.dir\\src.cxx.obj -c D:\\Qt\\project\\ChatServer\\build\\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2zhuna\\src.cxx
-        Linking CXX executable cmTC_ece17.exe
-        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_ece17.dir\\link.txt --verbose=1
-        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_ece17.dir/objects.a
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_ece17.dir/objects.a @CMakeFiles\\cmTC_ece17.dir\\objects1.rsp
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -Wl,--whole-archive CMakeFiles\\cmTC_ece17.dir/objects.a -Wl,--no-whole-archive -o cmTC_ece17.exe -Wl,--out-implib,libcmTC_ece17.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_ece17.dir\\linkLibs.rsp
-        mingw32-make.exe[1]: Leaving directory 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-2zhuna'
+        Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_5bd25/fast
+        D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_5bd25.dir\\build.make CMakeFiles/cmTC_5bd25.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ixlqww'
+        Building CXX object CMakeFiles/cmTC_5bd25.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles\\cmTC_5bd25.dir\\src.cxx.obj -c D:\\Qt\\project\\chat\\ChatServer\\build\\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ixlqww\\src.cxx
+        Linking CXX executable cmTC_5bd25.exe
+        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_5bd25.dir\\link.txt --verbose=1
+        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_5bd25.dir/objects.a
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_5bd25.dir/objects.a @CMakeFiles\\cmTC_5bd25.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -Wl,--whole-archive CMakeFiles\\cmTC_5bd25.dir/objects.a -Wl,--no-whole-archive -o cmTC_5bd25.exe -Wl,--out-implib,libcmTC_5bd25.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_5bd25.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-ixlqww'
         
       exitCode: 0
   -
@@ -407,8 +407,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-qhps2q"
-      binary: "D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-qhps2q"
+      source: "D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-gqh0m0"
+      binary: "D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-gqh0m0"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -418,19 +418,19 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-qhps2q'
+        Change Dir: 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-gqh0m0'
         
-        Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_93a29/fast
-        D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_93a29.dir\\build.make CMakeFiles/cmTC_93a29.dir/build
-        mingw32-make.exe[1]: Entering directory 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-qhps2q'
-        Building CXX object CMakeFiles/cmTC_93a29.dir/src.cxx.obj
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DHAVE_STDATOMIC  -std=gnu++17 -o CMakeFiles\\cmTC_93a29.dir\\src.cxx.obj -c D:\\Qt\\project\\ChatServer\\build\\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-qhps2q\\src.cxx
-        Linking CXX executable cmTC_93a29.exe
-        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_93a29.dir\\link.txt --verbose=1
-        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_93a29.dir/objects.a
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_93a29.dir/objects.a @CMakeFiles\\cmTC_93a29.dir\\objects1.rsp
-        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -Wl,--whole-archive CMakeFiles\\cmTC_93a29.dir/objects.a -Wl,--no-whole-archive -o cmTC_93a29.exe -Wl,--out-implib,libcmTC_93a29.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_93a29.dir\\linkLibs.rsp
-        mingw32-make.exe[1]: Leaving directory 'D:/Qt/project/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-qhps2q'
+        Run Build Command(s): D:/Qt/Tools/CMake_64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe -f Makefile cmTC_4b697/fast
+        D:/Qt/Tools/mingw1310_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4b697.dir\\build.make CMakeFiles/cmTC_4b697.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-gqh0m0'
+        Building CXX object CMakeFiles/cmTC_4b697.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DHAVE_STDATOMIC  -std=gnu++17 -o CMakeFiles\\cmTC_4b697.dir\\src.cxx.obj -c D:\\Qt\\project\\chat\\ChatServer\\build\\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gqh0m0\\src.cxx
+        Linking CXX executable cmTC_4b697.exe
+        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_4b697.dir\\link.txt --verbose=1
+        D:\\Qt\\Tools\\CMake_64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_4b697.dir/objects.a
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\ar.exe qc CMakeFiles\\cmTC_4b697.dir/objects.a @CMakeFiles\\cmTC_4b697.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -Wl,--whole-archive CMakeFiles\\cmTC_4b697.dir/objects.a -Wl,--no-whole-archive -o cmTC_4b697.exe -Wl,--out-implib,libcmTC_4b697.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_4b697.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/CMakeScratch/TryCompile-gqh0m0'
         
       exitCode: 0
 ...

@@ -56,10 +56,10 @@ RM = D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\project\ChatServer
+CMAKE_SOURCE_DIR = D:\Qt\project\chat\ChatServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+CMAKE_BINARY_DIR = D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,56 +84,11 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	D:\Qt\Tools\CMake_64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatServer\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -223,6 +178,54 @@ ChatServer_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.s
 .PHONY : ChatServer_autogen/mocs_compilation.cpp.s
 
+chatserver.obj: chatserver.cpp.obj
+.PHONY : chatserver.obj
+
+# target to build an object file
+chatserver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/chatserver.cpp.obj
+.PHONY : chatserver.cpp.obj
+
+chatserver.i: chatserver.cpp.i
+.PHONY : chatserver.i
+
+# target to preprocess a source file
+chatserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/chatserver.cpp.i
+.PHONY : chatserver.cpp.i
+
+chatserver.s: chatserver.cpp.s
+.PHONY : chatserver.s
+
+# target to generate assembly for a file
+chatserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/chatserver.cpp.s
+.PHONY : chatserver.cpp.s
+
+dbhelper.obj: dbhelper.cpp.obj
+.PHONY : dbhelper.obj
+
+# target to build an object file
+dbhelper.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/dbhelper.cpp.obj
+.PHONY : dbhelper.cpp.obj
+
+dbhelper.i: dbhelper.cpp.i
+.PHONY : dbhelper.i
+
+# target to preprocess a source file
+dbhelper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/dbhelper.cpp.i
+.PHONY : dbhelper.cpp.i
+
+dbhelper.s: dbhelper.cpp.s
+.PHONY : dbhelper.s
+
+# target to generate assembly for a file
+dbhelper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/dbhelper.cpp.s
+.PHONY : dbhelper.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -254,10 +257,6 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
-	@echo ... install
-	@echo ... install/local
-	@echo ... install/strip
-	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... ChatServer_autogen
 	@echo ... ChatServer_autogen_timestamp_deps
@@ -265,6 +264,12 @@ help:
 	@echo ... ChatServer_autogen/mocs_compilation.obj
 	@echo ... ChatServer_autogen/mocs_compilation.i
 	@echo ... ChatServer_autogen/mocs_compilation.s
+	@echo ... chatserver.obj
+	@echo ... chatserver.i
+	@echo ... chatserver.s
+	@echo ... dbhelper.obj
+	@echo ... dbhelper.i
+	@echo ... dbhelper.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
