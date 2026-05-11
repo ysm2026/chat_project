@@ -77,7 +77,7 @@ void ChatServer::closeServer(){
         server->close();
     }
     QList<QTcpSocket*>clients=clientArr;
-    for(QTcpSocket*sock:std::as_const(clients)){
+    for(const auto& sock:std::as_const(clients)){
         sock->disconnectFromHost();
         sock->deleteLater();
     }
