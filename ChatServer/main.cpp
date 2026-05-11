@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    chatserver ser;
+    ChatServer ser;
     ser.startServer(8888);
 
     // Set up code that uses the Qt event loop here.

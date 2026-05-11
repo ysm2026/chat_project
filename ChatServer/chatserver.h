@@ -6,13 +6,15 @@
 #include<QTcpSocket>
 #include<QList>
 
-class chatserver : public QObject
+class ChatServer : public QObject
 {
     Q_OBJECT
 public:
-    explicit chatserver(QObject *parent = nullptr);
+    explicit ChatServer(QObject *parent = nullptr);
     //开启服务器，传端口号
     void startServer(quint16 port);
+    //new:关闭服务器
+    void closeServer();
 private slots:
     //客户端连上触发
     void newClientConnect();
