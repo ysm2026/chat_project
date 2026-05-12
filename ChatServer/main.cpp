@@ -1,9 +1,13 @@
 #include<QCoreApplication>
 #include"chatserver.h"
+#include"dbhelper.h"
+#include<QDebug>
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+    //初始化连接数据库
+    Dbhelper::getInstance().connectMySql();
     ChatServer ser;
     ser.startServer(8888);
 

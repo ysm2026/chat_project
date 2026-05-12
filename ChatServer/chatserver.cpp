@@ -1,6 +1,7 @@
 #include "chatserver.h"
 #include<QDebug>
 #include<QHostAddress>
+#include"dbhelper.h"
 
 ChatServer::ChatServer(QObject *parent)
     : QObject{parent}

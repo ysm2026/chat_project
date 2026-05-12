@@ -6,6 +6,7 @@
 #include<QSqlQuery>     //执行Sql语句
 #include<QSqlError>    //获取错误信息，用于调试和错误处理
 #include<QDebug>       //控制台打印错误信息
+#include<QCryptographicHash> //加密md5
 
 class Dbhelper:public QObject{
     Q_OBJECT    //Qt信号槽必备宏
@@ -19,7 +20,9 @@ public:
     bool registerUser(const QString &username,const QString &password_hash,
                       const QString &nickname,const QString &email,const QString &phone);
     //用户表登录
-    int loging(const QString &username,const QString &password, const QString &nickname);
+    bool loging(const QString &username,const QString &password,QString &nickname);
+    //密码md5加密
+    static QString md5Password(const QString& password_hash);
     //消息表：保存群聊消息
     bool saveRoom_Message(int send_id,int room_id,const QString &content);
     //消息表：保存私聊消息
