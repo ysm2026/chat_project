@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/ChatClient.dir/chatclient.cpp.obj"
+  "CMakeFiles/ChatClient.dir/chatclient.cpp.obj.d"
   "CMakeFiles/ChatClient.dir/main.cpp.obj"
   "CMakeFiles/ChatClient.dir/main.cpp.obj.d"
-  "CMakeFiles/ChatClient.dir/mainwindow.cpp.obj"
-  "CMakeFiles/ChatClient.dir/mainwindow.cpp.obj.d"
   "ChatClient.exe"
   "ChatClient.exe.manifest"
   "ChatClient.pdb"

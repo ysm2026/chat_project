@@ -56,10 +56,10 @@ RM = D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\project\ChatClient
+CMAKE_SOURCE_DIR = D:\Qt\project\chat\ChatClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+CMAKE_BINARY_DIR = D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -131,9 +131,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -223,6 +223,30 @@ ChatClient_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.s
 
+chatclient.obj: chatclient.cpp.obj
+.PHONY : chatclient.obj
+
+# target to build an object file
+chatclient.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/chatclient.cpp.obj
+.PHONY : chatclient.cpp.obj
+
+chatclient.i: chatclient.cpp.i
+.PHONY : chatclient.i
+
+# target to preprocess a source file
+chatclient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/chatclient.cpp.i
+.PHONY : chatclient.cpp.i
+
+chatclient.s: chatclient.cpp.s
+.PHONY : chatclient.s
+
+# target to generate assembly for a file
+chatclient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/chatclient.cpp.s
+.PHONY : chatclient.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -247,30 +271,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mainwindow.obj: mainwindow.cpp.obj
-.PHONY : mainwindow.obj
-
-# target to build an object file
-mainwindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/mainwindow.cpp.obj
-.PHONY : mainwindow.cpp.obj
-
-mainwindow.i: mainwindow.cpp.i
-.PHONY : mainwindow.i
-
-# target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
-
-mainwindow.s: mainwindow.cpp.s
-.PHONY : mainwindow.s
-
-# target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -289,12 +289,12 @@ help:
 	@echo ... ChatClient_autogen/mocs_compilation.obj
 	@echo ... ChatClient_autogen/mocs_compilation.i
 	@echo ... ChatClient_autogen/mocs_compilation.s
+	@echo ... chatclient.obj
+	@echo ... chatclient.i
+	@echo ... chatclient.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... mainwindow.obj
-	@echo ... mainwindow.i
-	@echo ... mainwindow.s
 .PHONY : help
 
 

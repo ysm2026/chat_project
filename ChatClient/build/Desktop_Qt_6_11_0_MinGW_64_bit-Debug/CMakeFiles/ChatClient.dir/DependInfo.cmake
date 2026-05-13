@@ -9,9 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "ChatClient_autogen/timestamp" "custom" "ChatClient_autogen/deps"
-  "D:/Qt/project/ChatClient/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/ChatClient_autogen/mocs_compilation.cpp" "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj.d"
-  "D:/Qt/project/ChatClient/main.cpp" "CMakeFiles/ChatClient.dir/main.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/main.cpp.obj.d"
-  "D:/Qt/project/ChatClient/mainwindow.cpp" "CMakeFiles/ChatClient.dir/mainwindow.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/mainwindow.cpp.obj.d"
+  "D:/Qt/project/chat/ChatClient/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/ChatClient_autogen/mocs_compilation.cpp" "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj.d"
+  "D:/Qt/project/chat/ChatClient/chatclient.cpp" "CMakeFiles/ChatClient.dir/chatclient.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/chatclient.cpp.obj.d"
+  "D:/Qt/project/chat/ChatClient/main.cpp" "CMakeFiles/ChatClient.dir/main.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -53,10 +53,10 @@ RM = D:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Qt\project\ChatClient
+CMAKE_SOURCE_DIR = D:\Qt\project\chat\ChatClient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+CMAKE_BINARY_DIR = D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -79,18 +79,18 @@ clean: CMakeFiles/ChatClient_autogen.dir/clean
 # Target rules for target CMakeFiles/ChatClient.dir
 
 # All Build rule for target.
-CMakeFiles/ChatClient.dir/all: CMakeFiles/ChatClient_autogen_timestamp_deps.dir/all
 CMakeFiles/ChatClient.dir/all: CMakeFiles/ChatClient_autogen.dir/all
+CMakeFiles/ChatClient.dir/all: CMakeFiles/ChatClient_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target ChatClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target ChatClient"
 .PHONY : CMakeFiles/ChatClient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ChatClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ChatClient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
 .PHONY : CMakeFiles/ChatClient.dir/rule
 
 # Convenience name for target.
@@ -109,14 +109,14 @@ CMakeFiles/ChatClient.dir/clean:
 CMakeFiles/ChatClient_autogen_timestamp_deps.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient_autogen_timestamp_deps.dir\build.make CMakeFiles/ChatClient_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient_autogen_timestamp_deps.dir\build.make CMakeFiles/ChatClient_autogen_timestamp_deps.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num= "Built target ChatClient_autogen_timestamp_deps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num= "Built target ChatClient_autogen_timestamp_deps"
 .PHONY : CMakeFiles/ChatClient_autogen_timestamp_deps.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ChatClient_autogen_timestamp_deps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ChatClient_autogen_timestamp_deps.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
 .PHONY : CMakeFiles/ChatClient_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -135,14 +135,14 @@ CMakeFiles/ChatClient_autogen_timestamp_deps.dir/clean:
 CMakeFiles/ChatClient_autogen.dir/all: CMakeFiles/ChatClient_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient_autogen.dir\build.make CMakeFiles/ChatClient_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient_autogen.dir\build.make CMakeFiles/ChatClient_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=6 "Built target ChatClient_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=6 "Built target ChatClient_autogen"
 .PHONY : CMakeFiles/ChatClient_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ChatClient_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ChatClient_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Qt\project\chat\ChatClient\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles 0
 .PHONY : CMakeFiles/ChatClient_autogen.dir/rule
 
 # Convenience name for target.

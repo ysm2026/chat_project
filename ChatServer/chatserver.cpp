@@ -55,7 +55,7 @@ void ChatServer::readData(){
     for(const auto&sock:std::as_const(clientArr)){
         if(sock!=cli&&sock!=nullptr&&
             sock->state()==QAbstractSocket::ConnectedState){
-            sock->write(sendMsg.toUtf8());
+            sock->write(msg.toUtf8());
             sock->flush();
         }
     }
