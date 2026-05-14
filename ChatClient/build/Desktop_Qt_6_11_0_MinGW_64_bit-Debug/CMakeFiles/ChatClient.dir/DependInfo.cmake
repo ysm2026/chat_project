@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "ChatClient_autogen/timestamp" "custom" "ChatClient_autogen/deps"
   "D:/Qt/project/chat/ChatClient/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/ChatClient_autogen/mocs_compilation.cpp" "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj.d"
   "D:/Qt/project/chat/ChatClient/chatclient.cpp" "CMakeFiles/ChatClient.dir/chatclient.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/chatclient.cpp.obj.d"
+  "D:/Qt/project/chat/ChatClient/logicawindow.cpp" "CMakeFiles/ChatClient.dir/logicawindow.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/logicawindow.cpp.obj.d"
   "D:/Qt/project/chat/ChatClient/main.cpp" "CMakeFiles/ChatClient.dir/main.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/main.cpp.obj.d"
   )
 

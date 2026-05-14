@@ -505,6 +505,12 @@
 			"MU",
 			"EWIEGA46WW/moc_chatclient.cpp",
 			null
+		],
+		[
+			"D:/Qt/project/chat/ChatClient/logicawindow.h",
+			"MU",
+			"EWIEGA46WW/moc_logicawindow.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -584,6 +590,7 @@
 	"SOURCES" : 
 	[
 		[ "D:/Qt/project/chat/ChatClient/chatclient.cpp", "MU", null ],
+		[ "D:/Qt/project/chat/ChatClient/logicawindow.cpp", "MU", null ],
 		[ "D:/Qt/project/chat/ChatClient/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

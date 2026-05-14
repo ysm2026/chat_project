@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTcpSocket>
 #include <QMessageBox>
+#include <QDialog>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class ChatClient;
@@ -31,11 +32,14 @@ private slots:
     void on_disconnect();
     //网络错误时触发
     void on_socket_error();
+
 private:
     Ui::ChatClient *ui;
     //客户端套接字，用来和服务器通信
     QTcpSocket *socket;
     //记录当前是否已连接服务器
     bool isconnect;
+
+
 };
 #endif // CHATCLIENT_H

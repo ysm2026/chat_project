@@ -247,6 +247,30 @@ chatclient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/chatclient.cpp.s
 .PHONY : chatclient.cpp.s
 
+logicawindow.obj: logicawindow.cpp.obj
+.PHONY : logicawindow.obj
+
+# target to build an object file
+logicawindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/logicawindow.cpp.obj
+.PHONY : logicawindow.cpp.obj
+
+logicawindow.i: logicawindow.cpp.i
+.PHONY : logicawindow.i
+
+# target to preprocess a source file
+logicawindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/logicawindow.cpp.i
+.PHONY : logicawindow.cpp.i
+
+logicawindow.s: logicawindow.cpp.s
+.PHONY : logicawindow.s
+
+# target to generate assembly for a file
+logicawindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/logicawindow.cpp.s
+.PHONY : logicawindow.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -292,6 +316,9 @@ help:
 	@echo ... chatclient.obj
 	@echo ... chatclient.i
 	@echo ... chatclient.s
+	@echo ... logicawindow.obj
+	@echo ... logicawindow.i
+	@echo ... logicawindow.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
