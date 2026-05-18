@@ -6,22 +6,11 @@
 ChatClient::ChatClient(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::ChatClient)
+    , m_socket(nullptr)
 {
     ui->setupUi(this);
-    //初始化客户端套接字
-    socket=new QTcpSocket(this);
-    isconnect=false;
-
-    //绑定信号槽：将网络事件与对应函数关联起来
-    connect(socket,&QTcpSocket::readyRead,this,&ChatClient::readServerData);
-    connect(socket,&QTcpSocket::connected,this,&ChatClient::on_connect);
-    connect(socket,&QTcpSocket::disconnected,this,&ChatClient::on_disconnect);
-    connect(socket,&QTcpSocket::errorOccurred,this,&ChatClient::on_socket_error);
-    //初始化界面：设置聊天框为只读，默认ip和端口，可修改
+    //初始化界面：设置聊天框为只读
     ui->mes_textEdit->setReadOnly(true);
-    ui->ip_lineEdit->setText("127.0.0.1");
-    ui->port_lineEdit->setText("8888");
-
 }
 
 ChatClient::~ChatClient()
@@ -29,46 +18,29 @@ ChatClient::~ChatClient()
     delete ui;
 }
 
-//连接/断开按钮点击事件
-void ChatClient::on_connect_button_clicked(){
-    if(!isconnect){
-        //1.获取用户输入的ip和端口
-        QString ip=ui->ip_lineEdit->text();
-        quint16 port=ui->port_lineEdit->text().toInt();
-        //QMessageBox::information(this,"提示","正在连接服务器!");
-        //2.主动连接服务器
-        socket->connectToHost(ip,port);
+void ChatClient::setUserInfo(const QString&username,const QString&nickname){
+    m_username=username;
+    m_nickname=nickname;
+    setWindowTitle(tr("聊天室-%1").arg(m_nickname));
+}
+
+void ChatClient::setTcpSocket(QTcpSocket*socket){
+    if(m_socket){
+        disconnect(m_socket,nullptr);
     }
-    else{
-        socket->disconnectFromHost();
+    m_socket=socket;
+    if(m_socket){
+        connect(m_socket,&QTcpSocket::readyRead,this,&ChatClient::readServerData);
+        connect(m_socket,&QTcpSocket::disconnected,this,&ChatClient::on_disconnect);
+        ui->mes_textEdit->append(tr("===== 欢迎%1，已连接服务器 =====").arg(m_nickname));
     }
-}
-
-//连接成功
-void ChatClient::on_connect(){
-    isconnect=true;
-    ui->connect_button->setText("断开连接");
-    ui->mes_textEdit->append("======成功连接服务器======");
-}
-
-//断开成功
-void ChatClient::on_disconnect(){
-    isconnect=false;
-    ui->connect_button->setText("连接服务器");
-    ui->mes_textEdit->append("======成功断开服务器======");
-}
-
-//接收服务器端信息
-void ChatClient::readServerData(){
-    QString msg=socket->readAll();
-    ui->mes_textEdit->append("对方："+msg);
 }
 
 //发送信息
 void ChatClient::on_send_button_clicked(){
     //QMessageBox::information(this,"提示","正在发送信息");
-    if(!isconnect){
-        QMessageBox::warning(this,"提示","请先连接服务器，发送失败!");
+    if(!m_socket||m_socket->state()!=QAbstractSocket::ConnectedState){
+        QMessageBox::warning(this,tr("提示"),tr("未连接到服务器，请重新连接"));
         return;
     }
     else{
@@ -76,14 +48,29 @@ void ChatClient::on_send_button_clicked(){
         if(text.isEmpty()){
             return;
         }
+        //显示自己发送信息
         ui->mes_textEdit->append("<font color='black'>我：</font><font color='green'>"+text+"</font>");
         ui->send_lineEdit->clear();
-        socket->write(text.toUtf8());
-        socket->waitForBytesWritten(1000);
+        //加换行符作为发送符号
+        m_socket->write((text+"\n").toUtf8());
+        m_socket->flush();
     }
 }
 
-//网络错误提示
-void ChatClient::on_socket_error(){
-    QMessageBox::critical(this,"连接失败",socket->errorString());
+//接收服务器端信息
+void ChatClient::readServerData(){
+    if(m_socket){
+        return;
+    }
+    QByteArray data=m_socket->readAll();
+    QString msg=QString::fromUtf8(data);
+    QStringList lines=msg.split('\n',Qt::SkipEmptyParts);
+    for(const QString &line:lines){
+        ui->mes_textEdit->append("对方："+line);
+    }
+}
+
+//断开连接
+void ChatClient::on_disconnect(){
+    ui->mes_textEdit->append(tr("===== 已断开连接 ====="));
 }

@@ -21,7 +21,7 @@ bool Dbhelper::connectMySql(){
     db.setDatabaseName("chat_room");
     db.setUserName("root");
     db.setPassword("663399QQ");
-    db.setConnectOptions("MYSQL_OPT_CONNECT_TIMEOUT=5;MYSQL_OPT_SSL_MODE=SSL_MODE_DISABLED");
+    db.setConnectOptions("MYSQL_OPT_SSL_MODE=0");
     if(!db.open()){
         qDebug()<<"数据库连接失败:"<<db.lastError().text();
         return false;

@@ -298,9 +298,6 @@ QT_CREATOR_ENABLE_PACKAGE_MANAGER_SETUP:BOOL=ON
 //Qt Creator source groups extensions
 QT_CREATOR_SOURCE_GROUPS:BOOL=ON
 
-//The directory containing a CMake configuration file for QT.
-QT_DIR:PATH=D:/Qt/6.11.0/mingw_64/lib/cmake/Qt6
-
 //No help, variable specified on the command line.
 QT_ENABLE_QML_DEBUG:BOOL=ON
 
@@ -501,8 +498,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
 QTCREATOR_CMAKE_HELPER_DIRECTORY:INTERNAL=D:/Qt/project/chat/ChatServer/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/.qtcreator/cmake-helper
