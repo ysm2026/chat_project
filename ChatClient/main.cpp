@@ -1,6 +1,7 @@
 #include "chatclient.h"
 #include "logicawindow.h"
 #include <QApplication>
+#include "registerwindow.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,6 +11,10 @@ int main(int argc, char *argv[])
 
     //创建登录窗口
     LogicaWindow loginWin;
+
+    //创建注册窗口
+    registerwindow registWin;
+
     //创建聊天主窗口，设为不显示，登录成功再显示
     ChatClient chatWin;
 
@@ -21,5 +26,7 @@ int main(int argc, char *argv[])
         chatWin.show();
     });
     loginWin.show();
+    registWin.show();
+
     return QCoreApplication::exec();
 }

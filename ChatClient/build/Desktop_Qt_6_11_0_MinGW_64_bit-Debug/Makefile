@@ -295,6 +295,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+registerwindow.obj: registerwindow.cpp.obj
+.PHONY : registerwindow.obj
+
+# target to build an object file
+registerwindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/registerwindow.cpp.obj
+.PHONY : registerwindow.cpp.obj
+
+registerwindow.i: registerwindow.cpp.i
+.PHONY : registerwindow.i
+
+# target to preprocess a source file
+registerwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/registerwindow.cpp.i
+.PHONY : registerwindow.cpp.i
+
+registerwindow.s: registerwindow.cpp.s
+.PHONY : registerwindow.s
+
+# target to generate assembly for a file
+registerwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/registerwindow.cpp.s
+.PHONY : registerwindow.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -322,6 +346,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... registerwindow.obj
+	@echo ... registerwindow.i
+	@echo ... registerwindow.s
 .PHONY : help
 
 

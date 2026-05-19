@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChatClient_autogen"
   "ChatClient_autogen/include/ui_chatclient.h"
   "ChatClient_autogen/include/ui_logicawindow.h"
+  "ChatClient_autogen/include/ui_registerwindow.h"
   "ChatClient_autogen/mocs_compilation.cpp"
   "ChatClient_autogen/timestamp"
 )

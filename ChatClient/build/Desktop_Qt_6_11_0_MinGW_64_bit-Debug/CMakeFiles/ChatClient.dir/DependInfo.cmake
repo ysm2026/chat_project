@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Qt/project/chat/ChatClient/chatclient.cpp" "CMakeFiles/ChatClient.dir/chatclient.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/chatclient.cpp.obj.d"
   "D:/Qt/project/chat/ChatClient/logicawindow.cpp" "CMakeFiles/ChatClient.dir/logicawindow.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/logicawindow.cpp.obj.d"
   "D:/Qt/project/chat/ChatClient/main.cpp" "CMakeFiles/ChatClient.dir/main.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/main.cpp.obj.d"
+  "D:/Qt/project/chat/ChatClient/registerwindow.cpp" "CMakeFiles/ChatClient.dir/registerwindow.cpp.obj" "gcc" "CMakeFiles/ChatClient.dir/registerwindow.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
