@@ -19,6 +19,10 @@ public:
     QString LoggedInUsername()const{return m_username;}
     QString LoggedInNickname()const{return m_nickname;}
     QTcpSocket*getSocket()const{return socket;}
+    // 切换到注册页时暂停登录对 socket 的监听（含错误信号，避免误报网络错误）
+    void pauseLoginSocketHandlers();
+    // 回到登录页时恢复
+    void resumeLoginSocketHandlers();
 
 private:
     void sendLoginRequest();

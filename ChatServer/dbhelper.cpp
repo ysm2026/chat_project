@@ -46,6 +46,18 @@ QSqlQuery Dbhelper::querySql(const QString&sql){
     return query;
 }
 
+/*=====================0、检查用户名是否存在===================*/
+bool Dbhelper::userExists(const QString &username){
+    QSqlQuery query;
+    query.prepare("select id from user where username=:username");
+    query.bindValue(":username",username);
+    if(!query.exec()){
+        qDebug()<<"查询用户失败:"<<query.lastError().text();
+        return false;
+    }
+    return query.next();
+}
+
 /*=====================1、用户注册===================*/
 bool Dbhelper::registerUser(const QString &username,
                             const QString &password_hash,
@@ -53,12 +65,12 @@ bool Dbhelper::registerUser(const QString &username,
                             const QString &email,
                             const QString &phone){
     QString pwd=md5Password(password_hash);
-    QString sql=QString("insert int user(username,password_hash,nickname,email,phone)valuse"
+    QString sql=QString("insert into user(username,password_hash,nickname,email,phone)values"
                           "(:username, :password_hash, :nickname, :email, :phone)");
     QSqlQuery query;
     query.prepare(sql);
     query.bindValue(":username",username);
-    query.bindValue(":passwor_hash",pwd);
+    query.bindValue(":password_hash",pwd);
     query.bindValue(":nickname",nickname);
     query.bindValue(":email",email);
     query.bindValue(":phone",phone);
@@ -71,8 +83,7 @@ bool Dbhelper::registerUser(const QString &username,
 /*=====================2、用户登录===================*/
 bool Dbhelper::loging(const QString &username,const QString &password_hash,QString &nickname){
     QString pwd=md5Password(password_hash);
-    QString sql=QString("select id,nickname from user"
-                          "where username=:username and password_hash=:password_hash and status=1");
+    QString sql=QString("select id,nickname from user where username=:username and password_hash=:password_hash and status=1");
     QSqlQuery query;
     query.prepare(sql);
     query.bindValue(":username",username);

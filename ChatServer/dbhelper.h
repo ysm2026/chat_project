@@ -16,6 +16,8 @@ public:
     bool execSql(const QString&sql);//执行增删改操，无结果返回
     QSqlQuery querySql(const QString&sql);  //执行查找操作，没有结果返回
     /*=============用户接口==============*/
+    //检查用户名是否已存在
+    bool userExists(const QString &username);
     //用户表注册
     bool registerUser(const QString &username,const QString &password_hash,
                       const QString &nickname,const QString &email,const QString &phone);

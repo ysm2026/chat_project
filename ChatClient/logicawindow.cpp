@@ -57,12 +57,30 @@ void LogicaWindow::on_logica_pushButton_clicked(){
     }
     else{
         m_pendingLogin=true;
+        // 上次连接失败后需 abort，否则再次 connectToHost 可能立刻触发 errorOccurred
+        if(socket->state()!=QAbstractSocket::UnconnectedState){
+            socket->abort();
+        }
         socket->connectToHost("127.0.0.1",8888);
     }
 }
-//注册按钮点击
+//注册按钮点击：通知主窗口切换到注册界面
 void LogicaWindow::on_regist_pushButton_clicked(){
-    QMessageBox::information(this,tr("提示"),tr("注册功能开发中"));
+    emit switchRegister();
+}
+
+void LogicaWindow::pauseLoginSocketHandlers()
+{
+    disconnect(socket, &QTcpSocket::readyRead, this, &LogicaWindow::readLoginData);
+    disconnect(socket, &QTcpSocket::errorOccurred, this, &LogicaWindow::socketError);
+    disconnect(socket, &QTcpSocket::connected, this, &LogicaWindow::on_SocketConnected);
+}
+
+void LogicaWindow::resumeLoginSocketHandlers()
+{
+    connect(socket, &QTcpSocket::readyRead, this, &LogicaWindow::readLoginData);
+    connect(socket, &QTcpSocket::errorOccurred, this, &LogicaWindow::socketError);
+    connect(socket, &QTcpSocket::connected, this, &LogicaWindow::on_SocketConnected);
 }
 
 //连接服务器成功
