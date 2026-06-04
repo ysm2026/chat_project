@@ -423,7 +423,8 @@
 		"D:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake",
 		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 		"D:/Qt/6.11.0/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake",
-		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake"
+		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
+		"D:/Qt/project/chat/ChatClient/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/Qt/project/chat/ChatClient",
 	"CROSS_CONFIG" : false,
@@ -447,6 +448,18 @@
 			"D:/Qt/project/chat/ChatClient/registerwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_registerwindow.cpp",
+			null
+		],
+		[
+			"D:/Qt/project/chat/common/appconfig.h",
+			"MU",
+			"XWFYMENXMP/moc_appconfig.cpp",
+			null
+		],
+		[
+			"D:/Qt/project/chat/common/netpacket.h",
+			"MU",
+			"XWFYMENXMP/moc_netpacket.cpp",
 			null
 		]
 	],
@@ -529,7 +542,9 @@
 		[ "D:/Qt/project/chat/ChatClient/chatclient.cpp", "MU", null ],
 		[ "D:/Qt/project/chat/ChatClient/logicawindow.cpp", "MU", null ],
 		[ "D:/Qt/project/chat/ChatClient/main.cpp", "MU", null ],
-		[ "D:/Qt/project/chat/ChatClient/registerwindow.cpp", "MU", null ]
+		[ "D:/Qt/project/chat/ChatClient/registerwindow.cpp", "MU", null ],
+		[ "D:/Qt/project/chat/common/appconfig.cpp", "MU", null ],
+		[ "D:/Qt/project/chat/common/netpacket.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

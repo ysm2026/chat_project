@@ -29,8 +29,8 @@ public:
     bool saveRoom_Message(int send_id,int room_id,const QString &content);
     //消息表：保存私聊消息
     bool savePrivate_Message(int send_id,int reciver_id,const QString &content);
-    //创建房间
-    bool create_room(const QString &room_name,int room_type,int create_id);
+    //创建房间，成功返回新房间 id，失败返回 0
+    int create_room(const QString &room_name,int room_type,int create_id);
     //加入房间
     bool join_room(int room_id,int user_id);
 

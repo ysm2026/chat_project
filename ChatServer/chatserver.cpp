@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QHostAddress>
 
+#include "../common/netpacket.h"
 #include "dbhelper.h"
 
 ChatServer::ChatServer(QObject *parent)
@@ -12,13 +13,14 @@ ChatServer::ChatServer(QObject *parent)
     connect(m_server, &QTcpServer::newConnection, this, &ChatServer::newClientConnect);
 }
 
-void ChatServer::startServer(quint16 port)
+bool ChatServer::startServer(quint16 port)
 {
     if (m_server->listen(QHostAddress::Any, port)) {
         qDebug() << "服务器启动成功，端口：" << port;
-    } else {
-        qDebug() << "服务器启动失败：" << m_server->errorString();
+        return true;
     }
+    qDebug() << "服务器启动失败：" << m_server->errorString();
+    return false;
 }
 
 void ChatServer::newClientConnect()
@@ -26,6 +28,7 @@ void ChatServer::newClientConnect()
     QTcpSocket *client = m_server->nextPendingConnection();
     m_clients.append(client);
     m_recvBuffers.append(QByteArray());
+    m_usernames.append(QString());
     m_nicknames.append(QString());
 
     qDebug() << "新客户端上线:" << client->peerAddress().toString();
@@ -39,28 +42,44 @@ int ChatServer::indexOfClient(QTcpSocket *client) const
     return m_clients.indexOf(client);
 }
 
-void ChatServer::sendLine(QTcpSocket *client, const QString &line)
+bool ChatServer::isLoggedIn(QTcpSocket *client) const
+{
+    const int idx = indexOfClient(client);
+    return idx >= 0 && !m_usernames.at(idx).isEmpty();
+}
+
+void ChatServer::sendPacket(QTcpSocket *client, const QString &line)
 {
     if (!client || client->state() != QAbstractSocket::ConnectedState) {
         return;
     }
-    client->write((line + "\n").toUtf8());
-    client->flush();
+    client->write(NetPacket::encode(line));
+}
+
+void ChatServer::broadcastLine(const QString &line, QTcpSocket *except)
+{
+    for (QTcpSocket *sock : m_clients) {
+        if (!sock || sock == except
+            || sock->state() != QAbstractSocket::ConnectedState) {
+            continue;
+        }
+        sendPacket(sock, line);
+    }
 }
 
 void ChatServer::handleLogin(QTcpSocket *client, const QString &line)
 {
-    QStringList parts = line.split('|');
-    if (parts.size() < 3) {
-        sendLine(client, "LOGIN_FAIL|请求格式错误");
+    const QString username = line.section('|', 1, 1).trimmed();
+    const QString password = line.section('|', 2, 2);
+
+    if (username.isEmpty() || password.isEmpty()) {
+        sendPacket(client, "LOGIN_FAIL|用户名或密码不能为空");
         return;
     }
 
-    QString username = parts.at(1).trimmed();
-    QString password = parts.at(2);
-
-    if (username.isEmpty() || password.isEmpty()) {
-        sendLine(client, "LOGIN_FAIL|用户名或密码不能为空");
+    if (m_onlineByUsername.contains(username)) {
+        sendPacket(client, "LOGIN_FAIL|该账号已在别处登录，请先退出");
+        qDebug() << "重复登录被拒绝:" << username;
         return;
     }
 
@@ -69,75 +88,165 @@ void ChatServer::handleLogin(QTcpSocket *client, const QString &line)
         if (nickname.isEmpty()) {
             nickname = username;
         }
-        sendLine(client, "LOGIN_OK|" + nickname);
-        int idx = indexOfClient(client);
+
+        const int idx = indexOfClient(client);
         if (idx >= 0) {
+            m_usernames[idx] = username;
             m_nicknames[idx] = nickname;
         }
+        m_onlineByUsername.insert(username, client);
+
+        sendPacket(client, "LOGIN_OK|" + nickname);
+        notifyUserOnline(client);
         qDebug() << "用户登录成功:" << username;
     } else {
-        sendLine(client, "LOGIN_FAIL|用户名或密码错误");
+        sendPacket(client, "LOGIN_FAIL|用户名或密码错误");
         qDebug() << "用户登录失败:" << username;
     }
 }
 
 void ChatServer::handleRegister(QTcpSocket *client, const QString &line)
 {
-    QStringList parts = line.split('|');
-    if (parts.size() < 4) {
-        sendLine(client, "REGISTER_FAIL|请求格式错误");
-        return;
-    }
-
-    QString username = parts.at(1).trimmed();
-    QString password = parts.at(2);
-    QString nickname = parts.at(3).trimmed();
+    const QString username = line.section('|', 1, 1).trimmed();
+    const QString password = line.section('|', 2, 2);
+    const QString nickname = line.section('|', 3).trimmed();
 
     if (username.isEmpty() || password.isEmpty()) {
-        sendLine(client, "REGISTER_FAIL|用户名或密码不能为空");
+        sendPacket(client, "REGISTER_FAIL|用户名或密码不能为空");
         return;
     }
     if (nickname.isEmpty()) {
-        sendLine(client, "REGISTER_FAIL|昵称不能为空");
+        sendPacket(client, "REGISTER_FAIL|昵称不能为空");
         return;
     }
 
     if (Dbhelper::getInstance().userExists(username)) {
-        sendLine(client, "REGISTER_FAIL|用户名已存在");
+        sendPacket(client, "REGISTER_FAIL|用户名已存在");
         return;
     }
 
     if (Dbhelper::getInstance().registerUser(username, password, nickname, "", "")) {
-        sendLine(client, "REGISTER_OK");
+        sendPacket(client, "REGISTER_OK");
         qDebug() << "用户注册成功:" << username;
     } else {
-        sendLine(client, "REGISTER_FAIL|注册失败，请稍后重试");
+        sendPacket(client, "REGISTER_FAIL|注册失败，请稍后重试");
     }
 }
 
 void ChatServer::broadcastChat(QTcpSocket *senderSocket, const QString &msg)
 {
-    QString text = msg.trimmed();
+    const QString text = msg.trimmed();
     if (text.isEmpty()) {
         return;
     }
 
-    int senderIdx = indexOfClient(senderSocket);
-    QString nickname = tr("游客");
-    if (senderIdx >= 0 && !m_nicknames.at(senderIdx).isEmpty()) {
-        nickname = m_nicknames.at(senderIdx);
+    const int senderIdx = indexOfClient(senderSocket);
+    if (senderIdx < 0 || m_usernames.at(senderIdx).isEmpty()) {
+        sendPacket(senderSocket, "SYS|请先登录后再发言");
+        return;
     }
 
-    QString payload = "CHAT|" + nickname + "|" + text;
+    const QString nickname = m_nicknames.at(senderIdx);
+    const QString payload = "CHAT|" + nickname + "|" + text;
 
-    for (int i = 0; i < m_clients.size(); ++i) {
-        QTcpSocket *sock = m_clients.at(i);
-        if (sock && sock != senderSocket
-            && sock->state() == QAbstractSocket::ConnectedState) {
-            sendLine(sock, payload);
+    for (QTcpSocket *sock : m_clients) {
+        if (!sock || sock == senderSocket
+            || sock->state() != QAbstractSocket::ConnectedState) {
+            continue;
+        }
+        sendPacket(sock, payload);
+    }
+    qDebug() << "群聊:" << nickname << text;
+}
+
+void ChatServer::handlePrivateChat(QTcpSocket *senderSocket, const QString &line)
+{
+    if (!isLoggedIn(senderSocket)) {
+        sendPacket(senderSocket, "SYS|请先登录后再发私聊");
+        return;
+    }
+
+    const QString targetUser = line.section('|', 1, 1).trimmed();
+    const QString content = line.section('|', 2).trimmed();
+    if (targetUser.isEmpty() || content.isEmpty()) {
+        return;
+    }
+
+    const int senderIdx = indexOfClient(senderSocket);
+    const QString fromUser = m_usernames.at(senderIdx);
+    const QString fromNick = m_nicknames.at(senderIdx);
+
+    // 发给自己：仅作备忘，不向客户端回显私聊包（避免重复显示）
+    if (targetUser == fromUser) {
+        qDebug() << "备忘" << fromUser << content;
+        return;
+    }
+
+    QTcpSocket *targetSock = m_onlineByUsername.value(targetUser, nullptr);
+    if (!targetSock) {
+        sendPacket(senderSocket, "SYS|对方不在线或用户名不存在");
+        return;
+    }
+
+    const QString payload = "PRIVATE|" + fromNick + "|" + fromUser + "|" + content;
+    sendPacket(targetSock, payload);
+    sendPacket(senderSocket, payload);
+    qDebug() << "私聊" << fromUser << "->" << targetUser << content;
+}
+
+QString ChatServer::buildOnlineList() const
+{
+    QStringList names;
+    for (int i = 0; i < m_usernames.size(); ++i) {
+        const QString &u = m_usernames.at(i);
+        if (!u.isEmpty()) {
+            const QString &nick = m_nicknames.at(i);
+            names.append(u + "|" + (nick.isEmpty() ? u : nick));
         }
     }
-    qDebug() << "收到聊天消息:" << nickname << text;
+    return names.join(';');
+}
+
+void ChatServer::notifyUserOnline(QTcpSocket *client)
+{
+    const int idx = indexOfClient(client);
+    if (idx < 0) {
+        return;
+    }
+
+    const QString username = m_usernames.at(idx);
+    const QString nickname = m_nicknames.at(idx);
+    if (username.isEmpty()) {
+        return;
+    }
+
+    sendPacket(client, "ONLINE_LIST|" + buildOnlineList());
+    broadcastLine("USER_ONLINE|" + nickname + "|" + username, client);
+}
+
+void ChatServer::notifyUserOffline(const QString &nickname, const QString &username)
+{
+    if (nickname.isEmpty() && username.isEmpty()) {
+        return;
+    }
+    broadcastLine("USER_OFFLINE|" + nickname + "|" + username);
+}
+
+void ChatServer::dispatchLine(QTcpSocket *client, const QString &line)
+{
+    if (line.startsWith("LOGIN|")) {
+        handleLogin(client, line);
+    } else if (line.startsWith("REGISTER|")) {
+        handleRegister(client, line);
+    } else if (line.startsWith("PRIVATE|")) {
+        handlePrivateChat(client, line);
+    } else if (line.startsWith("CHAT|")) {
+        broadcastChat(client, line.section('|', 1));
+    } else if (isLoggedIn(client)) {
+        broadcastChat(client, line);
+    } else {
+        sendPacket(client, "SYS|请先登录后再发言");
+    }
 }
 
 void ChatServer::readData()
@@ -147,31 +256,20 @@ void ChatServer::readData()
         return;
     }
 
-    int idx = indexOfClient(client);
+    const int idx = indexOfClient(client);
     if (idx < 0) {
         return;
     }
 
     QByteArray &buffer = m_recvBuffers[idx];
-    buffer.append(client->readAll());
-
-    int lineEnd = -1;
-    while ((lineEnd = buffer.indexOf('\n')) >= 0) {
-        QByteArray lineBytes = buffer.left(lineEnd);
-        buffer.remove(0, lineEnd + 1);
-
-        QString line = QString::fromUtf8(lineBytes).trimmed();
+    QStringList lines;
+    NetPacket::feed(buffer, client->readAll(), lines);
+    for (const QString &rawLine : lines) {
+        const QString line = rawLine.trimmed();
         if (line.isEmpty()) {
             continue;
         }
-
-        if (line.startsWith("LOGIN|")) {
-            handleLogin(client, line);
-        } else if (line.startsWith("REGISTER|")) {
-            handleRegister(client, line);
-        } else {
-            broadcastChat(client, line);
-        }
+        dispatchLine(client, line);
     }
 }
 
@@ -182,10 +280,19 @@ void ChatServer::clientLeave()
         return;
     }
 
-    int idx = indexOfClient(client);
+    const int idx = indexOfClient(client);
     if (idx >= 0) {
+        const QString username = m_usernames.at(idx);
+        const QString nickname = m_nicknames.at(idx);
+
+        if (!username.isEmpty()) {
+            m_onlineByUsername.remove(username);
+        }
+        notifyUserOffline(nickname, username);
+
         m_clients.removeAt(idx);
         m_recvBuffers.removeAt(idx);
+        m_usernames.removeAt(idx);
         m_nicknames.removeAt(idx);
     }
 
@@ -199,13 +306,17 @@ void ChatServer::closeServer()
         m_server->close();
     }
 
-    QList<QTcpSocket *> clients = m_clients;
-    for (int i = 0; i < clients.size(); ++i) {
-        clients.at(i)->disconnectFromHost();
-        clients.at(i)->deleteLater();
+    const QList<QTcpSocket *> clients = m_clients;
+    for (QTcpSocket *sock : clients) {
+        if (sock) {
+            sock->disconnectFromHost();
+            sock->deleteLater();
+        }
     }
     m_clients.clear();
     m_recvBuffers.clear();
+    m_usernames.clear();
     m_nicknames.clear();
+    m_onlineByUsername.clear();
     qDebug() << "服务器已关闭";
 }

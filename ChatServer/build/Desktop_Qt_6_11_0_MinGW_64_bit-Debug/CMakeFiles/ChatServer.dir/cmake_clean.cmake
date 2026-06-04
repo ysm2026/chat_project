@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/ChatServer.dir/D_/Qt/project/chat/common/netpacket.cpp.obj"
+  "CMakeFiles/ChatServer.dir/D_/Qt/project/chat/common/netpacket.cpp.obj.d"
   "CMakeFiles/ChatServer.dir/chatserver.cpp.obj"
   "CMakeFiles/ChatServer.dir/chatserver.cpp.obj.d"
   "CMakeFiles/ChatServer.dir/dbhelper.cpp.obj"

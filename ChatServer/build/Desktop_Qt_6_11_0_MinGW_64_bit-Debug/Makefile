@@ -178,6 +178,30 @@ ChatServer_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/ChatServer_autogen/mocs_compilation.cpp.s
 .PHONY : ChatServer_autogen/mocs_compilation.cpp.s
 
+D_/Qt/project/chat/common/netpacket.obj: D_/Qt/project/chat/common/netpacket.cpp.obj
+.PHONY : D_/Qt/project/chat/common/netpacket.obj
+
+# target to build an object file
+D_/Qt/project/chat/common/netpacket.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/D_/Qt/project/chat/common/netpacket.cpp.obj
+.PHONY : D_/Qt/project/chat/common/netpacket.cpp.obj
+
+D_/Qt/project/chat/common/netpacket.i: D_/Qt/project/chat/common/netpacket.cpp.i
+.PHONY : D_/Qt/project/chat/common/netpacket.i
+
+# target to preprocess a source file
+D_/Qt/project/chat/common/netpacket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/D_/Qt/project/chat/common/netpacket.cpp.i
+.PHONY : D_/Qt/project/chat/common/netpacket.cpp.i
+
+D_/Qt/project/chat/common/netpacket.s: D_/Qt/project/chat/common/netpacket.cpp.s
+.PHONY : D_/Qt/project/chat/common/netpacket.s
+
+# target to generate assembly for a file
+D_/Qt/project/chat/common/netpacket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatServer.dir\build.make CMakeFiles/ChatServer.dir/D_/Qt/project/chat/common/netpacket.cpp.s
+.PHONY : D_/Qt/project/chat/common/netpacket.cpp.s
+
 chatserver.obj: chatserver.cpp.obj
 .PHONY : chatserver.obj
 
@@ -264,6 +288,9 @@ help:
 	@echo ... ChatServer_autogen/mocs_compilation.obj
 	@echo ... ChatServer_autogen/mocs_compilation.i
 	@echo ... ChatServer_autogen/mocs_compilation.s
+	@echo ... D_/Qt/project/chat/common/netpacket.obj
+	@echo ... D_/Qt/project/chat/common/netpacket.i
+	@echo ... D_/Qt/project/chat/common/netpacket.s
 	@echo ... chatserver.obj
 	@echo ... chatserver.i
 	@echo ... chatserver.s

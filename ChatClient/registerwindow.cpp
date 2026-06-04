@@ -1,6 +1,19 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
 #include <QDebug>
+#include <QCryptographicHash>
+
+#include "../common/netpacket.h"
+#include "../ChatServer/dbconfig.h"
+
+namespace {
+QString md5ForTransport(const QString &rawPassword)
+{
+    return QCryptographicHash::hash(rawPassword.toUtf8(), QCryptographicHash::Md5).toHex();
+}
+
+constexpr int kRequestTimeoutMs = 15000;
+}
 
 registerwindow::registerwindow(QWidget *parent)
     : QWidget(parent)
@@ -18,6 +31,9 @@ registerwindow::registerwindow(QWidget *parent)
 
     connect(ui->true_pushButton, &QPushButton::clicked, this, &registerwindow::on_true_pushButton_clicked);
     connect(ui->casual_pushButton, &QPushButton::clicked, this, &registerwindow::on_casual_pushButton_clicked);
+
+    m_registerTimeout.setSingleShot(true);
+    connect(&m_registerTimeout, &QTimer::timeout, this, &registerwindow::onRegisterTimeout);
 }
 
 registerwindow::~registerwindow()
@@ -39,9 +55,12 @@ void registerwindow::setTcpSocket(QTcpSocket *socket)
 
 void registerwindow::detachSocketHandlers()
 {
+    m_registerTimeout.stop();
     if(!m_socket){
         return;
     }
+    m_recvBuffer.clear();
+    m_waitingRegisterResponse = false;
     disconnect(m_socket, nullptr, this, nullptr);
     m_socket = nullptr;
 }
@@ -55,6 +74,7 @@ void registerwindow::resetForm()
     clearError();
     m_pendingRegister = false;
     m_waitingRegisterResponse = false;
+    m_registerTimeout.stop();
     setRegisterEnable(true);
 }
 
@@ -98,18 +118,18 @@ void registerwindow::on_true_pushButton_clicked()
         return;
     }
 
-    // 未连接：先连服务器，连上后在 onSocketConnected 里发 REGISTER
     m_pendingRegister = true;
     if(m_socket->state() != QAbstractSocket::UnconnectedState){
         m_socket->abort();
     }
-    m_socket->connectToHost("127.0.0.1", 8888);
+    m_socket->connectToHost(DbConfig::kChatHost, DbConfig::kChatPort);
 }
 
 void registerwindow::on_casual_pushButton_clicked()
 {
     m_pendingRegister = false;
     m_waitingRegisterResponse = false;
+    m_registerTimeout.stop();
     emit registerCancel();
 }
 
@@ -124,11 +144,30 @@ void registerwindow::onSocketConnected()
 void registerwindow::sendRegisterRequest()
 {
     m_waitingRegisterResponse = true;
-    const QString payload = QString("REGISTER|%1|%2|%3\n")
-                                .arg(m_username, m_password, m_nickname);
-    m_socket->write(payload.toUtf8());
-    m_socket->flush();
-    qDebug() << "发送注册请求:" << payload;
+    m_recvBuffer.clear();
+    m_registerTimeout.start(kRequestTimeoutMs);
+
+    const QString transportPassword = md5ForTransport(m_password);
+    const QString payload = QString("REGISTER|%1|%2|%3")
+                                .arg(m_username, transportPassword, m_nickname);
+    sendPacket(payload);
+    qDebug() << "发送注册请求: REGISTER|" << m_username << "|***|" << m_nickname;
+}
+
+void registerwindow::sendPacket(const QString &line)
+{
+    if (!m_socket || m_socket->state() != QAbstractSocket::ConnectedState) {
+        return;
+    }
+    m_socket->write(NetPacket::encode(line));
+}
+
+void registerwindow::finishRegisterRequest()
+{
+    m_registerTimeout.stop();
+    m_waitingRegisterResponse = false;
+    m_pendingRegister = false;
+    setRegisterEnable(true);
 }
 
 void registerwindow::readRegisterData()
@@ -137,48 +176,50 @@ void registerwindow::readRegisterData()
         return;
     }
 
-    const QByteArray data = m_socket->readAll();
-    const QString response = QString::fromUtf8(data).trimmed();
-    qDebug() << "注册收到服务器响应:" << response;
+    QStringList lines;
+    NetPacket::feed(m_recvBuffer, m_socket->readAll(), lines);
 
-    if(!m_waitingRegisterResponse){
-        return;
-    }
-
-    if(response.startsWith("REGISTER_OK")){
-        m_waitingRegisterResponse = false;
-        setRegisterEnable(true);
-        emit registerSuccess();
-        return;
-    }
-
-    if(response.startsWith("REGISTER_FAIL|")){
-        m_waitingRegisterResponse = false;
-        setRegisterEnable(true);
-        QString reason = response.section('|', 1);
-        if(reason.isEmpty()){
-            reason = tr("注册失败");
+    for (const QString &rawResponse : lines) {
+        const QString response = rawResponse.trimmed();
+        if (response.isEmpty()) {
+            continue;
         }
-        showError(reason);
+        qDebug() << "注册收到服务器响应:" << response;
+
+        if(!m_waitingRegisterResponse){
+            continue;
+        }
+
+        if(response.startsWith("REGISTER_OK")){
+            m_recvBuffer.clear();
+            finishRegisterRequest();
+            emit registerSuccess();
+            return;
+        }
+
+        if(response.startsWith("REGISTER_FAIL|")){
+            QString reason = response.section('|', 1);
+            if(reason.isEmpty()){
+                reason = tr("注册失败");
+            }
+            finishRegisterRequest();
+            showError(reason);
+            return;
+        }
+
+        finishRegisterRequest();
+        showError(tr("服务器响应异常，请确认 ChatServer 已重新编译并正在运行"));
         return;
     }
-
-    // 已发注册请求但收到非注册协议（例如旧版服务器只广播、未实现 REGISTER）
-    m_waitingRegisterResponse = false;
-    setRegisterEnable(true);
-    showError(tr("服务器响应异常，请确认 ChatServer 已重新编译并正在运行"));
 }
 
 void registerwindow::onSocketError()
 {
-    // 仅处理「本次点击注册」触发的连接错误，忽略历史错误或无关信号
-    if(!m_pendingRegister){
+    if(!m_pendingRegister && !m_waitingRegisterResponse){
         return;
     }
 
-    m_pendingRegister = false;
-    m_waitingRegisterResponse = false;
-    setRegisterEnable(true);
+    finishRegisterRequest();
 
     if(!m_socket){
         return;
@@ -186,12 +227,23 @@ void registerwindow::onSocketError()
 
     const QString err = m_socket->errorString();
     if(m_socket->error() == QAbstractSocket::ConnectionRefusedError){
-        showError(tr("无法连接服务器(127.0.0.1:8888)，请先启动 ChatServer"));
+        showError(tr("无法连接服务器(%1:%2)，请先启动 ChatServer")
+                      .arg(DbConfig::kChatHost)
+                      .arg(DbConfig::kChatPort));
     }
     else{
         showError(tr("网络错误：%1").arg(err));
     }
     qDebug() << "注册连接失败:" << err;
+}
+
+void registerwindow::onRegisterTimeout()
+{
+    if (!m_waitingRegisterResponse) {
+        return;
+    }
+    finishRegisterRequest();
+    showError(tr("注册请求超时，请稍后重试"));
 }
 
 void registerwindow::setRegisterEnable(bool enabled)

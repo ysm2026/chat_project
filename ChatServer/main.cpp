@@ -3,13 +3,21 @@
 #include"dbhelper.h"
 #include<QDebug>
 
+#include "dbconfig.h"
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
     //初始化连接数据库
-    Dbhelper::getInstance().connectMySql();
+    if (!Dbhelper::getInstance().connectMySql()) {
+        qDebug() << "服务启动失败：数据库未连接";
+        return 1;
+    }
     ChatServer ser;
-    ser.startServer(8888);
+    if (!ser.startServer(DbConfig::kChatPort)) {
+        qDebug() << "服务启动失败：端口监听失败";
+        return 1;
+    }
 
     // Set up code that uses the Qt event loop here.
     // Call QCoreApplication::quit() or QCoreApplication::exit() to quit the application.

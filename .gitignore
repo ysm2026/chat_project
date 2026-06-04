@@ -11,3 +11,5 @@ release/
 *.obj
 *.tmp
 *.bak
+db.local.ini
+**/db.local.ini

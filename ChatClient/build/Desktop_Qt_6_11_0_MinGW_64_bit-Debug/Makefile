@@ -199,6 +199,30 @@ ChatClient_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient_autogen.dir\build.make CMakeFiles/ChatClient_autogen.dir/build
 .PHONY : ChatClient_autogen/fast
 
+ChatClient_autogen/EWIEGA46WW/qrc_resources.obj: ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+.PHONY : ChatClient_autogen/EWIEGA46WW/qrc_resources.obj
+
+# target to build an object file
+ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+.PHONY : ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+
+ChatClient_autogen/EWIEGA46WW/qrc_resources.i: ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : ChatClient_autogen/EWIEGA46WW/qrc_resources.i
+
+# target to preprocess a source file
+ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.i
+
+ChatClient_autogen/EWIEGA46WW/qrc_resources.s: ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : ChatClient_autogen/EWIEGA46WW/qrc_resources.s
+
+# target to generate assembly for a file
+ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.s
+
 ChatClient_autogen/mocs_compilation.obj: ChatClient_autogen/mocs_compilation.cpp.obj
 .PHONY : ChatClient_autogen/mocs_compilation.obj
 
@@ -222,6 +246,54 @@ ChatClient_autogen/mocs_compilation.s: ChatClient_autogen/mocs_compilation.cpp.s
 ChatClient_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.s
+
+D_/Qt/project/chat/common/appconfig.obj: D_/Qt/project/chat/common/appconfig.cpp.obj
+.PHONY : D_/Qt/project/chat/common/appconfig.obj
+
+# target to build an object file
+D_/Qt/project/chat/common/appconfig.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.obj
+.PHONY : D_/Qt/project/chat/common/appconfig.cpp.obj
+
+D_/Qt/project/chat/common/appconfig.i: D_/Qt/project/chat/common/appconfig.cpp.i
+.PHONY : D_/Qt/project/chat/common/appconfig.i
+
+# target to preprocess a source file
+D_/Qt/project/chat/common/appconfig.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.i
+.PHONY : D_/Qt/project/chat/common/appconfig.cpp.i
+
+D_/Qt/project/chat/common/appconfig.s: D_/Qt/project/chat/common/appconfig.cpp.s
+.PHONY : D_/Qt/project/chat/common/appconfig.s
+
+# target to generate assembly for a file
+D_/Qt/project/chat/common/appconfig.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.s
+.PHONY : D_/Qt/project/chat/common/appconfig.cpp.s
+
+D_/Qt/project/chat/common/netpacket.obj: D_/Qt/project/chat/common/netpacket.cpp.obj
+.PHONY : D_/Qt/project/chat/common/netpacket.obj
+
+# target to build an object file
+D_/Qt/project/chat/common/netpacket.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/netpacket.cpp.obj
+.PHONY : D_/Qt/project/chat/common/netpacket.cpp.obj
+
+D_/Qt/project/chat/common/netpacket.i: D_/Qt/project/chat/common/netpacket.cpp.i
+.PHONY : D_/Qt/project/chat/common/netpacket.i
+
+# target to preprocess a source file
+D_/Qt/project/chat/common/netpacket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/netpacket.cpp.i
+.PHONY : D_/Qt/project/chat/common/netpacket.cpp.i
+
+D_/Qt/project/chat/common/netpacket.s: D_/Qt/project/chat/common/netpacket.cpp.s
+.PHONY : D_/Qt/project/chat/common/netpacket.s
+
+# target to generate assembly for a file
+D_/Qt/project/chat/common/netpacket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/netpacket.cpp.s
+.PHONY : D_/Qt/project/chat/common/netpacket.cpp.s
 
 chatclient.obj: chatclient.cpp.obj
 .PHONY : chatclient.obj
@@ -334,9 +406,18 @@ help:
 	@echo ... ChatClient_autogen
 	@echo ... ChatClient_autogen_timestamp_deps
 	@echo ... ChatClient
+	@echo ... ChatClient_autogen/EWIEGA46WW/qrc_resources.obj
+	@echo ... ChatClient_autogen/EWIEGA46WW/qrc_resources.i
+	@echo ... ChatClient_autogen/EWIEGA46WW/qrc_resources.s
 	@echo ... ChatClient_autogen/mocs_compilation.obj
 	@echo ... ChatClient_autogen/mocs_compilation.i
 	@echo ... ChatClient_autogen/mocs_compilation.s
+	@echo ... D_/Qt/project/chat/common/appconfig.obj
+	@echo ... D_/Qt/project/chat/common/appconfig.i
+	@echo ... D_/Qt/project/chat/common/appconfig.s
+	@echo ... D_/Qt/project/chat/common/netpacket.obj
+	@echo ... D_/Qt/project/chat/common/netpacket.i
+	@echo ... D_/Qt/project/chat/common/netpacket.s
 	@echo ... chatclient.obj
 	@echo ... chatclient.i
 	@echo ... chatclient.s

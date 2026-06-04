@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include <QTcpSocket>
+#include <QByteArray>
+#include <QStringList>
+#include <QTimer>
 
 namespace Ui {
 class LogicaWindow;
@@ -15,42 +18,41 @@ class LogicaWindow : public QWidget
 public:
     explicit LogicaWindow(QWidget *parent = nullptr);
     ~LogicaWindow();
-    //用户名获取接口，提供登录后的用户名和昵称
     QString LoggedInUsername()const{return m_username;}
     QString LoggedInNickname()const{return m_nickname;}
     QTcpSocket*getSocket()const{return socket;}
-    // 切换到注册页时暂停登录对 socket 的监听（含错误信号，避免误报网络错误）
+    QStringList takePendingServerLines();
     void pauseLoginSocketHandlers();
-    // 回到登录页时恢复
     void resumeLoginSocketHandlers();
 
 private:
     void sendLoginRequest();
+    void sendPacket(const QString &line);
     void setLoginEnable(bool enabled);
+    void finishLoginRequest(bool success);
 
     Ui::LogicaWindow *ui;
     QTcpSocket *socket;
+    QByteArray m_recvBuffer;
+    QTimer m_loginTimeout;
     bool m_pendingLogin;
+    bool m_waitingLoginResponse;
     QString m_username;
     QString m_password;
     QString m_nickname;
+    QStringList m_pendingServerLines;
 
 signals:
-    //切换到注册窗口
     void switchRegister();
-    //登录成功信号
     void loginSuccess();
 
-//私有槽函数
 private slots:
-    // 注册、登录按钮槽函数
     void on_logica_pushButton_clicked();
     void on_regist_pushButton_clicked();
     void on_SocketConnected();
-    // 接收服务器返回数据
     void readLoginData();
-    // 网络错误
     void socketError();
+    void onLoginTimeout();
 };
 
 #endif // LOGICAWINDOW_H

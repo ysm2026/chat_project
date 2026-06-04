@@ -1,4 +1,24 @@
 #include"dbhelper.h"
+#include "dbconfig.h"
+#include <QRegularExpression>
+
+namespace {
+
+bool isMd5Hex(const QString &input)
+{
+    static const QRegularExpression kMd5Pattern("^[A-Fa-f0-9]{32}$");
+    return kMd5Pattern.match(input).hasMatch();
+}
+
+QString normalizeIncomingPassword(const QString &input)
+{
+    if (isMd5Hex(input)) {
+        return input.toLower();
+    }
+    return Dbhelper::md5Password(input);
+}
+}
+
 //Md5加密
 QString Dbhelper::md5Password(const QString &password_hash){
     QByteArray bt=password_hash.toUtf8();
@@ -16,12 +36,22 @@ Dbhelper & Dbhelper::getInstance(){
 }
 bool Dbhelper::connectMySql(){
     db=QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("localhost");
-    db.setPort(3306);
-    db.setDatabaseName("chat_room");
-    db.setUserName("root");
-    db.setPassword("663399QQ");
-    db.setConnectOptions("MYSQL_OPT_SSL_MODE=0");
+    db.setHostName(DbConfig::kHost);
+    db.setPort(DbConfig::kPort);
+    db.setDatabaseName(DbConfig::kDatabaseName);
+    db.setUserName(DbConfig::kUser);
+    db.setPassword(DbConfig::kPassword);
+
+    const QString sslMode = QString::fromUtf8(DbConfig::kSslMode).trimmed();
+    if (!sslMode.isEmpty()) {
+        db.setConnectOptions("MYSQL_OPT_SSL_MODE=" + sslMode);
+    }
+
+    if (db.password().isEmpty() || QString(DbConfig::kPassword).isEmpty()) {
+        qDebug() << "数据库连接失败: 请在 ChatServer/dbconfig.h 中设置 kPassword";
+        return false;
+    }
+
     if(!db.open()){
         qDebug()<<"数据库连接失败:"<<db.lastError().text();
         return false;
@@ -31,7 +61,7 @@ bool Dbhelper::connectMySql(){
 }
 
 bool Dbhelper::execSql(const QString&sql){
-    QSqlQuery query;
+    QSqlQuery query(db);
     if(!query.exec(sql)){
         qDebug()<<"SQL执行失败："<<query.lastError().text();
         return false;
@@ -41,14 +71,14 @@ bool Dbhelper::execSql(const QString&sql){
 }
 
 QSqlQuery Dbhelper::querySql(const QString&sql){
-    QSqlQuery query;
+    QSqlQuery query(db);
     query.exec(sql);
     return query;
 }
 
 /*=====================0、检查用户名是否存在===================*/
 bool Dbhelper::userExists(const QString &username){
-    QSqlQuery query;
+    QSqlQuery query(db);
     query.prepare("select id from user where username=:username");
     query.bindValue(":username",username);
     if(!query.exec()){
@@ -64,10 +94,10 @@ bool Dbhelper::registerUser(const QString &username,
                             const QString &nickname,
                             const QString &email,
                             const QString &phone){
-    QString pwd=md5Password(password_hash);
-    QString sql=QString("insert into user(username,password_hash,nickname,email,phone)values"
-                          "(:username, :password_hash, :nickname, :email, :phone)");
-    QSqlQuery query;
+    const QString pwd = normalizeIncomingPassword(password_hash);
+    QString sql=QString("insert into user(username,password_hash,nickname,email,phone,status)values"
+                          "(:username, :password_hash, :nickname, :email, :phone, 1)");
+    QSqlQuery query(db);
     query.prepare(sql);
     query.bindValue(":username",username);
     query.bindValue(":password_hash",pwd);
@@ -82,9 +112,9 @@ bool Dbhelper::registerUser(const QString &username,
 }
 /*=====================2、用户登录===================*/
 bool Dbhelper::loging(const QString &username,const QString &password_hash,QString &nickname){
-    QString pwd=md5Password(password_hash);
+    const QString pwd = normalizeIncomingPassword(password_hash);
     QString sql=QString("select id,nickname from user where username=:username and password_hash=:password_hash and status=1");
-    QSqlQuery query;
+    QSqlQuery query(db);
     query.prepare(sql);
     query.bindValue(":username",username);
     query.bindValue(":password_hash",pwd);
@@ -101,28 +131,28 @@ bool Dbhelper::loging(const QString &username,const QString &password_hash,QStri
     return false;
 }
 /*=====================3、创建聊天室===================*/
-bool Dbhelper::create_room(const QString &room_name,int room_type,int create_id){
+int Dbhelper::create_room(const QString &room_name,int room_type,int create_id){
     QString sql("insert into chat_room(room_name,room_type,create_id)"
                 "values(:room_name, :room_type, :create_id)");
-    QSqlQuery query;
+    QSqlQuery query(db);
     query.prepare(sql);
     query.bindValue(":room_name",room_name);
     query.bindValue(":room_type",room_type);
     query.bindValue(":create_id",create_id);
     if(!query.exec()){
         qDebug()<<"房间创建失败"<<query.lastError().text();
-        return false;
+        return 0;
     }
-    QSqlQuery q=querySql("select last_insert_id()");
-    if(q.next()){
+    QSqlQuery q(db);
+    if(q.exec("select last_insert_id()") && q.next()){
         return q.value(0).toInt();
     }
-    return false;
+    return 0;
 }
 /*=====================4、用户加入聊天室===================*/
 bool Dbhelper::join_room(int room_id,int user_id){
-    QString sql("insert into room_number(room_id,user_id)values(:room_id, :user_name)");
-    QSqlQuery query;
+    QString sql("insert into room_number(room_id,user_id)values(:room_id, :user_id)");
+    QSqlQuery query(db);
     query.prepare(sql);
     query.bindValue(":room_id",room_id);
     query.bindValue(":user_id",user_id);
@@ -136,23 +166,29 @@ bool Dbhelper::join_room(int room_id,int user_id){
 }
 /*=====================5、保留群聊信息==================*/
 bool Dbhelper::saveRoom_Message(int send_id,int room_id,const QString &content){
-    QString sql("insert into message(room_id,send_id,content,status,message_type)values"
-                "(:room_id, :send_id, :content,1,1)");
-    QSqlQuery query;
-    query.prepare(sql);
+    QSqlQuery query(db);
+    query.prepare("insert into message(room_id,send_id,content,status,message_type)"
+                  " values(:room_id, :send_id, :content, 1, 1)");
     query.bindValue(":room_id",room_id);
-    query.bindValue("send_id",send_id);
+    query.bindValue(":send_id",send_id);
     query.bindValue(":content",content);
-    return execSql(sql);
+    if(!query.exec()){
+        qDebug()<<"群聊消息入库失败:"<<query.lastError().text();
+        return false;
+    }
+    return true;
 }
 /*=====================5、保留私聊信息==================*/
 bool Dbhelper::savePrivate_Message(int send_id,int reciver_id,const QString &content){
-    QString sql("insert into message(reciver_id,send_id,room_id,content,status,message_type)values"
-                "(:reciver_id, :send_id,0, :content,1,1)");
-    QSqlQuery query;
-    query.prepare(sql);
+    QSqlQuery query(db);
+    query.prepare("insert into message(reciver_id,send_id,room_id,content,status,message_type)"
+                  " values(:reciver_id, :send_id, 0, :content, 1, 2)");
     query.bindValue(":reciver_id",reciver_id);
-    query.bindValue("send_id",send_id);
+    query.bindValue(":send_id",send_id);
     query.bindValue(":content",content);
-    return execSql(sql);
+    if(!query.exec()){
+        qDebug()<<"私聊消息入库失败:"<<query.lastError().text();
+        return false;
+    }
+    return true;
 }

@@ -17,6 +17,8 @@ add_executable(ChatServer
   dbhelper.h
   chatserver.h
   chatserver.cpp
+  ../common/netpacket.h
+  ../common/netpacket.cpp
 )
 target_link_libraries(ChatServer PRIVATE Qt6::Core
   Qt6::Sql

@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
     // 登录成功：关闭登录窗，用同一 TCP 连接进入聊天界面
     QObject::connect(&loginWin, &LogicaWindow::loginSuccess, [&]() {
         loginWin.pauseLoginSocketHandlers();
-        chatWin.setTcpSocket(loginWin.getSocket());
         chatWin.setUserInfo(loginWin.LoggedInUsername(), loginWin.LoggedInNickname());
+        chatWin.setTcpSocket(loginWin.getSocket(), loginWin.takePendingServerLines());
         loginWin.close();
         chatWin.show();
     });

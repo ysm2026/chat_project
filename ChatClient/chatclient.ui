@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>621</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,14 +18,51 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>761</width>
-      <height>481</height>
+      <y>50</y>
+      <width>490</width>
+      <height>451</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contact_label">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>20</y>
+      <width>261</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>联系人</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="user_listWidget">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>52</y>
+      <width>261</width>
+      <height>449</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
      </font>
     </property>
    </widget>
@@ -60,6 +97,24 @@
     </property>
     <property name="text">
      <string>发送</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="chatMode_label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>当前：群聊（全员可见）</string>
     </property>
    </widget>
   </widget>
