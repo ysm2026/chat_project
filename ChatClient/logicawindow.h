@@ -22,6 +22,7 @@ public:
     QString LoggedInNickname()const{return m_nickname;}
     QTcpSocket*getSocket()const{return socket;}
     QStringList takePendingServerLines();
+    QByteArray takeRecvBuffer();
     void pauseLoginSocketHandlers();
     void resumeLoginSocketHandlers();
 

@@ -451,12 +451,6 @@
 			null
 		],
 		[
-			"D:/Qt/project/chat/common/appconfig.h",
-			"MU",
-			"XWFYMENXMP/moc_appconfig.cpp",
-			null
-		],
-		[
 			"D:/Qt/project/chat/common/netpacket.h",
 			"MU",
 			"XWFYMENXMP/moc_netpacket.cpp",
@@ -543,7 +537,6 @@
 		[ "D:/Qt/project/chat/ChatClient/logicawindow.cpp", "MU", null ],
 		[ "D:/Qt/project/chat/ChatClient/main.cpp", "MU", null ],
 		[ "D:/Qt/project/chat/ChatClient/registerwindow.cpp", "MU", null ],
-		[ "D:/Qt/project/chat/common/appconfig.cpp", "MU", null ],
 		[ "D:/Qt/project/chat/common/netpacket.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

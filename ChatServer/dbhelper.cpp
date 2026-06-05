@@ -111,7 +111,7 @@ bool Dbhelper::registerUser(const QString &username,
     return true;
 }
 /*=====================2、用户登录===================*/
-bool Dbhelper::loging(const QString &username,const QString &password_hash,QString &nickname){
+bool Dbhelper::loging(const QString &username,const QString &password_hash,QString &nickname,int *userId){
     const QString pwd = normalizeIncomingPassword(password_hash);
     QString sql=QString("select id,nickname from user where username=:username and password_hash=:password_hash and status=1");
     QSqlQuery query(db);
@@ -121,14 +121,34 @@ bool Dbhelper::loging(const QString &username,const QString &password_hash,QStri
     if(!query.exec()){
         qDebug()<<"登陆失败,登录失败查询："<<query.lastError().text();
         nickname.clear();
+        if (userId) {
+            *userId = 0;
+        }
         return false;
     }
     if(query.next()){
+        if (userId) {
+            *userId = query.value("id").toInt();
+        }
         nickname=query.value("nickname").toString();
         return true;
     }
     nickname.clear();
+    if (userId) {
+        *userId = 0;
+    }
     return false;
+}
+
+int Dbhelper::getUserIdByUsername(const QString &username)
+{
+    QSqlQuery query(db);
+    query.prepare("select id from user where username=:username and status=1");
+    query.bindValue(":username", username);
+    if (!query.exec() || !query.next()) {
+        return 0;
+    }
+    return query.value(0).toInt();
 }
 /*=====================3、创建聊天室===================*/
 int Dbhelper::create_room(const QString &room_name,int room_type,int create_id){
@@ -167,8 +187,8 @@ bool Dbhelper::join_room(int room_id,int user_id){
 /*=====================5、保留群聊信息==================*/
 bool Dbhelper::saveRoom_Message(int send_id,int room_id,const QString &content){
     QSqlQuery query(db);
-    query.prepare("insert into message(room_id,send_id,content,status,message_type)"
-                  " values(:room_id, :send_id, :content, 1, 1)");
+    query.prepare("insert into message(room_id,send_id,receiver_id,content,status,message_type,delivery_status)"
+                  " values(:room_id, :send_id, NULL, :content, 1, 1, 1)");
     query.bindValue(":room_id",room_id);
     query.bindValue(":send_id",send_id);
     query.bindValue(":content",content);
@@ -178,16 +198,81 @@ bool Dbhelper::saveRoom_Message(int send_id,int room_id,const QString &content){
     }
     return true;
 }
-/*=====================5、保留私聊信息==================*/
-bool Dbhelper::savePrivate_Message(int send_id,int reciver_id,const QString &content){
+/*=====================6、保留私聊信息==================*/
+int Dbhelper::savePrivate_Message(int send_id,int receiver_id,const QString &content,int delivery_status){
     QSqlQuery query(db);
-    query.prepare("insert into message(reciver_id,send_id,room_id,content,status,message_type)"
-                  " values(:reciver_id, :send_id, 0, :content, 1, 2)");
-    query.bindValue(":reciver_id",reciver_id);
+    query.prepare("insert into message(receiver_id,send_id,room_id,content,status,message_type,delivery_status)"
+                  " values(:receiver_id, :send_id, 0, :content, 1, 1, :delivery_status)");
+    query.bindValue(":receiver_id",receiver_id);
     query.bindValue(":send_id",send_id);
     query.bindValue(":content",content);
+    query.bindValue(":delivery_status",delivery_status);
     if(!query.exec()){
-        qDebug()<<"私聊消息入库失败:"<<query.lastError().text();
+        qDebug() << "私聊消息入库失败:" << query.lastError().text()
+                 << "（若提示 delivery_status 不存在，请执行 ChatServer/migrate_offline.sql）";
+        return 0;
+    }
+    return query.lastInsertId().toInt();
+}
+
+QList<PendingPrivateMessage> Dbhelper::fetchUndeliveredPrivateMessages(int receiverId)
+{
+    QList<PendingPrivateMessage> result;
+    if (receiverId <= 0) {
+        return result;
+    }
+
+    QSqlQuery query(db);
+    query.prepare(
+        "select m.id, m.content, m.send_time, u.username, u.nickname "
+        "from message m "
+        "inner join user u on u.id = m.send_id "
+        "where m.receiver_id = :receiver_id and m.room_id = 0 "
+        "and m.message_type = 1 and m.status = 1 and m.delivery_status = 0 "
+        "order by m.id asc");
+    query.bindValue(":receiver_id", receiverId);
+    if (!query.exec()) {
+        qDebug() << "查询离线私聊失败:" << query.lastError().text()
+                 << "（请确认已执行 migrate_offline.sql 且存在 delivery_status 字段）";
+        return result;
+    }
+
+    while (query.next()) {
+        PendingPrivateMessage item;
+        item.id = query.value("id").toInt();
+        item.fromUsername = query.value("username").toString();
+        item.fromNickname = query.value("nickname").toString();
+        item.content = query.value("content").toString();
+        item.createdAt = query.value("send_time").toDateTime();
+        if (item.fromNickname.isEmpty()) {
+            item.fromNickname = item.fromUsername;
+        }
+        result.append(item);
+    }
+    return result;
+}
+
+bool Dbhelper::markPrivateMessagesDelivered(const QList<int> &messageIds)
+{
+    if (messageIds.isEmpty()) {
+        return true;
+    }
+
+    QStringList placeholders;
+    for (int i = 0; i < messageIds.size(); ++i) {
+        placeholders.append(QString(":id%1").arg(i));
+    }
+
+    QSqlQuery query(db);
+    query.prepare(QString(
+        "update message set delivery_status = 1 "
+        "where id in (%1) and room_id = 0 and message_type = 1")
+                      .arg(placeholders.join(',')));
+    for (int i = 0; i < messageIds.size(); ++i) {
+        query.bindValue(QString(":id%1").arg(i), messageIds.at(i));
+    }
+    if (!query.exec()) {
+        qDebug() << "标记私聊已投递失败:" << query.lastError().text();
         return false;
     }
     return true;

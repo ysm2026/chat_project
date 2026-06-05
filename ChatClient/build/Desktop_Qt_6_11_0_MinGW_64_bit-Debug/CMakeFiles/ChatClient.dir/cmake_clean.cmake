@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChatClient.dir/ChatClient_autogen/EWIEGA46WW/qrc_resources.cpp.obj.d"
   "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.obj.d"
-  "CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.obj"
-  "CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.obj.d"
   "CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/netpacket.cpp.obj"
   "CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/netpacket.cpp.obj.d"
   "CMakeFiles/ChatClient.dir/chatclient.cpp.obj"

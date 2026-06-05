@@ -85,10 +85,14 @@ QStringList LogicaWindow::takePendingServerLines()
     return std::exchange(m_pendingServerLines, QStringList());
 }
 
+QByteArray LogicaWindow::takeRecvBuffer()
+{
+    return std::exchange(m_recvBuffer, QByteArray());
+}
+
 void LogicaWindow::pauseLoginSocketHandlers()
 {
     m_loginTimeout.stop();
-    m_recvBuffer.clear();
     m_waitingLoginResponse = false;
     disconnect(socket, &QTcpSocket::readyRead, this, &LogicaWindow::readLoginData);
     disconnect(socket, &QTcpSocket::errorOccurred, this, &LogicaWindow::socketError);
@@ -181,7 +185,18 @@ void LogicaWindow::readLoginData(){
     }
 
     if (loginOk) {
-        m_recvBuffer.clear();
+        // 同一次 TCP 读里可能还有 ONLINE_LIST 等，非阻塞读完内核缓冲
+        while (socket->bytesAvailable() > 0) {
+            QStringList moreLines;
+            NetPacket::feed(m_recvBuffer, socket->readAll(), moreLines);
+            for (const QString &rawResponse : moreLines) {
+                const QString response = rawResponse.trimmed();
+                if (response.isEmpty() || response.startsWith(QLatin1String("LOGIN_OK|"))) {
+                    continue;
+                }
+                m_pendingServerLines.append(response);
+            }
+        }
         finishLoginRequest(true);
         emit loginSuccess();
     }

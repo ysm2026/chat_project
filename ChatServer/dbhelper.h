@@ -7,6 +7,15 @@
 #include<QSqlError>    //获取错误信息，用于调试和错误处理
 #include<QDebug>       //控制台打印错误信息
 #include<QCryptographicHash> //加密md5
+#include <QDateTime>
+
+struct PendingPrivateMessage {
+    int id = 0;
+    QString fromUsername;
+    QString fromNickname;
+    QString content;
+    QDateTime createdAt;
+};
 
 class Dbhelper:public QObject{
     Q_OBJECT    //Qt信号槽必备宏
@@ -21,14 +30,17 @@ public:
     //用户表注册
     bool registerUser(const QString &username,const QString &password_hash,
                       const QString &nickname,const QString &email,const QString &phone);
-    //用户表登录
-    bool loging(const QString &username,const QString &password,QString &nickname);
+    //用户表登录（成功时可选返回 userId）
+    bool loging(const QString &username,const QString &password,QString &nickname,int *userId=nullptr);
+    int getUserIdByUsername(const QString &username);
     //密码md5加密
     static QString md5Password(const QString& password_hash);
     //消息表：保存群聊消息
     bool saveRoom_Message(int send_id,int room_id,const QString &content);
-    //消息表：保存私聊消息
-    bool savePrivate_Message(int send_id,int reciver_id,const QString &content);
+    //消息表：保存私聊消息，delivery_status 0=未投递 1=已投递，返回 message.id
+    int savePrivate_Message(int send_id,int receiver_id,const QString &content,int delivery_status=0);
+    QList<PendingPrivateMessage> fetchUndeliveredPrivateMessages(int receiverId);
+    bool markPrivateMessagesDelivered(const QList<int> &messageIds);
     //创建房间，成功返回新房间 id，失败返回 0
     int create_room(const QString &room_name,int room_type,int create_id);
     //加入房间

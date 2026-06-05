@@ -247,30 +247,6 @@ ChatClient_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.s
 
-D_/Qt/project/chat/common/appconfig.obj: D_/Qt/project/chat/common/appconfig.cpp.obj
-.PHONY : D_/Qt/project/chat/common/appconfig.obj
-
-# target to build an object file
-D_/Qt/project/chat/common/appconfig.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.obj
-.PHONY : D_/Qt/project/chat/common/appconfig.cpp.obj
-
-D_/Qt/project/chat/common/appconfig.i: D_/Qt/project/chat/common/appconfig.cpp.i
-.PHONY : D_/Qt/project/chat/common/appconfig.i
-
-# target to preprocess a source file
-D_/Qt/project/chat/common/appconfig.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.i
-.PHONY : D_/Qt/project/chat/common/appconfig.cpp.i
-
-D_/Qt/project/chat/common/appconfig.s: D_/Qt/project/chat/common/appconfig.cpp.s
-.PHONY : D_/Qt/project/chat/common/appconfig.s
-
-# target to generate assembly for a file
-D_/Qt/project/chat/common/appconfig.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ChatClient.dir\build.make CMakeFiles/ChatClient.dir/D_/Qt/project/chat/common/appconfig.cpp.s
-.PHONY : D_/Qt/project/chat/common/appconfig.cpp.s
-
 D_/Qt/project/chat/common/netpacket.obj: D_/Qt/project/chat/common/netpacket.cpp.obj
 .PHONY : D_/Qt/project/chat/common/netpacket.obj
 
@@ -412,9 +388,6 @@ help:
 	@echo ... ChatClient_autogen/mocs_compilation.obj
 	@echo ... ChatClient_autogen/mocs_compilation.i
 	@echo ... ChatClient_autogen/mocs_compilation.s
-	@echo ... D_/Qt/project/chat/common/appconfig.obj
-	@echo ... D_/Qt/project/chat/common/appconfig.i
-	@echo ... D_/Qt/project/chat/common/appconfig.s
 	@echo ... D_/Qt/project/chat/common/netpacket.obj
 	@echo ... D_/Qt/project/chat/common/netpacket.i
 	@echo ... D_/Qt/project/chat/common/netpacket.s

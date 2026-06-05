@@ -18,7 +18,9 @@ int main(int argc, char *argv[])
     QObject::connect(&loginWin, &LogicaWindow::loginSuccess, [&]() {
         loginWin.pauseLoginSocketHandlers();
         chatWin.setUserInfo(loginWin.LoggedInUsername(), loginWin.LoggedInNickname());
-        chatWin.setTcpSocket(loginWin.getSocket(), loginWin.takePendingServerLines());
+        chatWin.setTcpSocket(loginWin.getSocket(),
+                             loginWin.takePendingServerLines(),
+                             loginWin.takeRecvBuffer());
         loginWin.close();
         chatWin.show();
     });
